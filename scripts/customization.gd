@@ -18,3 +18,26 @@ func _on_skin_color_picker_button_color_changed(color: Color) -> void:
 
 func _on_pants_color_picker_button_color_changed(color: Color) -> void:
 	character.set_color("Pants",color)
+
+
+func _on_hair_color_picker_button_color_changed(color: Color) -> void:
+	character.set_color("Hair",color)
+
+
+func _on_eyes_color_picker_button_color_changed(color: Color) -> void:
+	character.set_color("Eyes",color)
+
+
+func _on_top_color_picker_button_color_changed(color: Color) -> void:
+	character.set_color("Top",color)
+	
+	
+
+
+
+func _on_button_pressed() -> void:
+	character.set_pose("Default")
+
+
+func _on_button_2_pressed() -> void:
+	character.set_pose("Pose 1")

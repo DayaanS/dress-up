@@ -41,4 +41,23 @@ func set_color(color_name, color):
 		"Pants":
 			for pants_part in pants_parts_list:
 				pants_part.self_modulate = color
-			
+		"Eyes":
+			$Body/Neck/Head/EyeL/EyeWhite/EyeIris.self_modulate = color
+			$Body/Neck/Head/EyeR/EyeWhite/EyeIris.self_modulate = color
+		"Top":
+			$Body/ArmL/ForearmL/HandL/Sprite2D.self_modulate = color
+			$Body/ArmL/ForearmL/Sprite2D2.self_modulate = color
+			$Body/ArmL/Sprite2D3.self_modulate = color
+			$Body/ArmR/Sprite2D4.self_modulate = color
+			$Body/ArmR/ForearmR/Sprite2D3.self_modulate = color
+			$Body/ArmR/ForearmR/HandR/Sprite2D2.self_modulate = color
+			$Body/Torso/Sprite2D.self_modulate = color
+		"Hair":
+			$Body/Neck/Head/HairBack.self_modulate = color
+			$Body/Neck/Head/HairFront.self_modulate = color
+func set_pose(pose_name):
+	match pose_name:
+		"Pose 1":
+			$AnimationPlayer.play("new_animation")
+		"Default":
+			$AnimationPlayer.play("RESET")

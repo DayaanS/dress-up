@@ -19,9 +19,10 @@ offset_bottom = 64.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UI" unique_id=924974819]
 layout_mode = 0
-offset_top = -64.0
-offset_right = 264.0
-offset_bottom = -4.0
+offset_left = 218.0
+offset_top = 78.0
+offset_right = 482.0
+offset_bottom = 394.0
 
 [node name="SkinHBoxContainer" type="HBoxContainer" parent="UI/VBoxContainer" unique_id=807960127]
 layout_mode = 2
@@ -47,5 +48,57 @@ text = "Pants"
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 
+[node name="HBoxContainer2" type="HBoxContainer" parent="UI/VBoxContainer" unique_id=1808103051]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UI/VBoxContainer/HBoxContainer2" unique_id=548522289]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Hair"
+
+[node name="HairColorPickerButton" type="ColorPickerButton" parent="UI/VBoxContainer/HBoxContainer2" unique_id=549307605]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="UI/VBoxContainer" unique_id=738394307]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UI/VBoxContainer/HBoxContainer3" unique_id=188959542]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Eyes"
+
+[node name="EyesColorPickerButton" type="ColorPickerButton" parent="UI/VBoxContainer/HBoxContainer3" unique_id=6841921]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="UI/VBoxContainer" unique_id=156549697]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UI/VBoxContainer/HBoxContainer4" unique_id=1043712720]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Top"
+
+[node name="TopColorPickerButton" type="ColorPickerButton" parent="UI/VBoxContainer/HBoxContainer4" unique_id=744098322]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/VBoxContainer" unique_id=950029422]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="UI/VBoxContainer/HBoxContainer" unique_id=1544224920]
+layout_mode = 2
+text = "Default pose"
+
+[node name="Button2" type="Button" parent="UI/VBoxContainer/HBoxContainer" unique_id=1536442784]
+layout_mode = 2
+text = "Pose 1"
+
 [connection signal="color_changed" from="UI/VBoxContainer/SkinHBoxContainer/SkinColorPickerButton" to="." method="_on_skin_color_picker_button_color_changed"]
 [connection signal="color_changed" from="UI/VBoxContainer/PantsHBoxContainer/PantsColorPickerButton" to="." method="_on_pants_color_picker_button_color_changed"]
+[connection signal="color_changed" from="UI/VBoxContainer/HBoxContainer2/HairColorPickerButton" to="." method="_on_hair_color_picker_button_color_changed"]
+[connection signal="color_changed" from="UI/VBoxContainer/HBoxContainer3/EyesColorPickerButton" to="." method="_on_eyes_color_picker_button_color_changed"]
+[connection signal="color_changed" from="UI/VBoxContainer/HBoxContainer4/TopColorPickerButton" to="." method="_on_top_color_picker_button_color_changed"]
+[connection signal="pressed" from="UI/VBoxContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="UI/VBoxContainer/HBoxContainer/Button2" to="." method="_on_button_2_pressed"]
