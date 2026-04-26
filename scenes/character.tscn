@@ -1,18 +1,18 @@
 [gd_scene format=3 uid="uid://nc7j4mf7wqih"]
 
 [ext_resource type="Script" uid="uid://dk1k63cgf7t8x" path="res://scripts/character.gd" id="1_50cep"]
-[ext_resource type="Texture2D" uid="uid://73dtqqe51t2" path="res://assets/reference.svg" id="1_rbud2"]
-[ext_resource type="Texture2D" uid="uid://dino77u3g8lw1" path="res://assets/images/neck.png" id="2_vovfy"]
+[ext_resource type="Texture2D" uid="uid://73dtqqe51t2" path="res://assets/images/reference.svg" id="1_rbud2"]
 [ext_resource type="Texture2D" uid="uid://cw3rkyv8fdahu" path="res://assets/images/head.svg" id="3_u0pwc"]
+[ext_resource type="Texture2D" uid="uid://bbs3jldstffc0" path="res://assets/images/neck.svg" id="3_vovfy"]
 [ext_resource type="Texture2D" uid="uid://bwrogv8x3ncs4" path="res://assets/images/hair_back.svg" id="4_cicko"]
 [ext_resource type="Texture2D" uid="uid://bobwsboon05wp" path="res://assets/images/hair_front.svg" id="5_bj47h"]
-[ext_resource type="Texture2D" uid="uid://db42i8mwy7fbp" path="res://assets/images_eye_white.svg" id="6_4lh0q"]
-[ext_resource type="Texture2D" uid="uid://c4uofwiqrw70a" path="res://assets/images_eye_iris.svg" id="7_7qyni"]
-[ext_resource type="Texture2D" uid="uid://bvn1d44onp87p" path="res://assets/images_eye_pupil.svg" id="8_sougf"]
-[ext_resource type="Texture2D" uid="uid://77um4vdxq3w6" path="res://assets/images_eye_shine.svg" id="9_p478o"]
-[ext_resource type="Texture2D" uid="uid://d0jmkskje2jns" path="res://assets/images_eye_lash.svg" id="10_2y1m1"]
-[ext_resource type="Texture2D" uid="uid://cstlyeh053r4f" path="res://assets/images_mouth.svg" id="11_41u22"]
-[ext_resource type="Texture2D" uid="uid://cydtg4khbta76" path="res://assets/images_brow.svg" id="12_8vsun"]
+[ext_resource type="Texture2D" uid="uid://db42i8mwy7fbp" path="res://assets/images/images_eye_white.svg" id="6_4lh0q"]
+[ext_resource type="Texture2D" uid="uid://c4uofwiqrw70a" path="res://assets/images/images_eye_iris.svg" id="7_7qyni"]
+[ext_resource type="Texture2D" uid="uid://bvn1d44onp87p" path="res://assets/images/images_eye_pupil.svg" id="8_sougf"]
+[ext_resource type="Texture2D" uid="uid://77um4vdxq3w6" path="res://assets/images/images_eye_shine.svg" id="9_p478o"]
+[ext_resource type="Texture2D" uid="uid://d0jmkskje2jns" path="res://assets/images/images_eye_lash.svg" id="10_2y1m1"]
+[ext_resource type="Texture2D" uid="uid://cstlyeh053r4f" path="res://assets/images/images_mouth.svg" id="11_41u22"]
+[ext_resource type="Texture2D" uid="uid://cydtg4khbta76" path="res://assets/images/images_brow.svg" id="12_8vsun"]
 [ext_resource type="Texture2D" uid="uid://bgqv1st36fxtx" path="res://assets/images/arm.svg" id="13_8rpqn"]
 [ext_resource type="Texture2D" uid="uid://cglpquc80sioj" path="res://assets/images/forearm.svg" id="14_i0gp7"]
 [ext_resource type="Texture2D" uid="uid://b7i660il6bjdp" path="res://assets/images/hand.svg" id="15_imt6f"]
@@ -35,7 +35,7 @@ texture = ExtResource("1_rbud2")
 [node name="Neck" type="Sprite2D" parent="Skeleton" unique_id=1442281354 groups=["skin"]]
 self_modulate = Color(0.54901963, 0.54901963, 0.54901963, 1)
 position = Vector2(0, -265)
-texture = ExtResource("2_vovfy")
+texture = ExtResource("3_vovfy")
 
 [node name="Head" type="Sprite2D" parent="Skeleton/Neck" unique_id=1548726401 groups=["skin"]]
 position = Vector2(0, -75)
@@ -176,5 +176,6 @@ texture = ExtResource("17_3et6r")
 flip_h = true
 
 [node name="Torso" type="Sprite2D" parent="Skeleton" unique_id=1326883433 groups=["skin"]]
+unique_name_in_owner = true
 self_modulate = Color(0.5489626, 0.5489626, 0.54896253, 1)
 texture = ExtResource("18_so3kc")

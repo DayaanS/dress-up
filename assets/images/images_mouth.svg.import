@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgo1p45oknr8v"
-path="res://.godot/imported/face_brow.svg-1db2c480f70fd88a980652ec96117e3a.ctex"
+uid="uid://cstlyeh053r4f"
+path="res://.godot/imported/images_mouth.svg-42519177c679575928806543a189563c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/face_brow.svg"
-dest_files=["res://.godot/imported/face_brow.svg-1db2c480f70fd88a980652ec96117e3a.ctex"]
+source_file="res://assets/images/images_mouth.svg"
+dest_files=["res://.godot/imported/images_mouth.svg-42519177c679575928806543a189563c.ctex"]
 
 [params]
 

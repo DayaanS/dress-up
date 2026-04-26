@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blo5t7p7qg1w3"
-path="res://.godot/imported/face_eye_pupil.svg-5bf628a097f83fee930e6c49f5e6a442.ctex"
+uid="uid://77um4vdxq3w6"
+path="res://.godot/imported/images_eye_shine.svg-b690845d29ac18d1833e2da6461d4c25.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/face_eye_pupil.svg"
-dest_files=["res://.godot/imported/face_eye_pupil.svg-5bf628a097f83fee930e6c49f5e6a442.ctex"]
+source_file="res://assets/images/images_eye_shine.svg"
+dest_files=["res://.godot/imported/images_eye_shine.svg-b690845d29ac18d1833e2da6461d4c25.ctex"]
 
 [params]
 

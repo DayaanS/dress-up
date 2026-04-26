@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvn1d44onp87p"
-path="res://.godot/imported/images_eye_pupil.svg-a6546b57dd21cdcd2bbc41b0446479c8.ctex"
+uid="uid://c4uofwiqrw70a"
+path="res://.godot/imported/images_eye_iris.svg-fab555737dae67d5c35ba0435cf19a23.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images_eye_pupil.svg"
-dest_files=["res://.godot/imported/images_eye_pupil.svg-a6546b57dd21cdcd2bbc41b0446479c8.ctex"]
+source_file="res://assets/images/images_eye_iris.svg"
+dest_files=["res://.godot/imported/images_eye_iris.svg-fab555737dae67d5c35ba0435cf19a23.ctex"]
 
 [params]
 

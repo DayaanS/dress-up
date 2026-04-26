@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dag6rlhtui7rd"
-path="res://.godot/imported/face_eye_shine.svg-882b61a4014020fe5a0a46f2b84c8ed5.ctex"
+uid="uid://1wytnsh4tre6"
+path="res://.godot/imported/bow.svg-029bc70e1fbe942d185b5a4889cccd5b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/face_eye_shine.svg"
-dest_files=["res://.godot/imported/face_eye_shine.svg-882b61a4014020fe5a0a46f2b84c8ed5.ctex"]
+source_file="res://assets/images/bow.svg"
+dest_files=["res://.godot/imported/bow.svg-029bc70e1fbe942d185b5a4889cccd5b.ctex"]
 
 [params]
 
