@@ -1,0 +1,367 @@
+[gd_scene format=3 uid="uid://bi75lf8klwh7l"]
+
+[ext_resource type="Texture2D" uid="uid://x0kombiny7xi" path="res://assets/images/body/arm.png" id="1_0dpix"]
+[ext_resource type="Script" uid="uid://bs0lybuoiddyy" path="res://scripts/characterOLD.gd" id="1_50cep"]
+[ext_resource type="Texture2D" uid="uid://bx6rvlg5r1dy8" path="res://assets/images/body/forearm.png" id="2_2hyy3"]
+[ext_resource type="Texture2D" uid="uid://rmld7n02e7if" path="res://assets/images/body/hand_1.png" id="3_irmqu"]
+[ext_resource type="Texture2D" uid="uid://bu5y3fh124rkc" path="res://assets/images/body/thigh.png" id="4_7eonc"]
+[ext_resource type="Texture2D" uid="uid://x0jq4ntesos1" path="res://assets/images/body/calf.png" id="5_50cep"]
+[ext_resource type="Texture2D" uid="uid://5x3l3ny4yqi2" path="res://assets/images/clothes/sweater_1_hand.png" id="5_cicko"]
+[ext_resource type="Texture2D" uid="uid://bc5ltvoesuj0b" path="res://assets/images/clothes/pants_1_calf.png" id="6_7eonc"]
+[ext_resource type="Texture2D" uid="uid://c7qvpg82bxf5" path="res://assets/images/body/torso.png" id="6_8yvht"]
+[ext_resource type="Texture2D" uid="uid://2yil3kg2jrw2" path="res://assets/images/clothes/sweater_1_forearm.png" id="6_bj47h"]
+[ext_resource type="Texture2D" uid="uid://pm633613k5xh" path="res://assets/images/clothes/sweater_1_arm.png" id="7_4lh0q"]
+[ext_resource type="Texture2D" uid="uid://88exmkr8m4lh" path="res://assets/images/clothes/pants_1_thigh.png" id="7_50cep"]
+[ext_resource type="Texture2D" uid="uid://djx80naq4sqf2" path="res://assets/images/body/neck.png" id="7_lagn4"]
+[ext_resource type="Texture2D" uid="uid://btmvhg63ujqe2" path="res://assets/images/body/ear_1.png" id="8_x8k1v"]
+[ext_resource type="Texture2D" uid="uid://big6pceq7486y" path="res://assets/images/body/head_1.png" id="9_ih8y6"]
+[ext_resource type="Texture2D" uid="uid://cc4q38a7jl37w" path="res://assets/images/clothes/pants_1_torso.png" id="12_8yvht"]
+[ext_resource type="Texture2D" uid="uid://x5tnec8oklwp" path="res://assets/images/face/eye_white_1.png" id="12_ih8y6"]
+[ext_resource type="Texture2D" uid="uid://by06ae5x8c8or" path="res://assets/images/face/eye_iris_1.png" id="13_rbud2"]
+[ext_resource type="Texture2D" uid="uid://yokwmisvjiaa" path="res://assets/images/face/eye_pupil_1.png" id="14_vovfy"]
+[ext_resource type="Texture2D" uid="uid://bbxhdlnteol4g" path="res://assets/images/face/eye_lash_1.png" id="15_u0pwc"]
+[ext_resource type="Texture2D" uid="uid://dqqcdgmu77f2v" path="res://assets/images/face/mouth_1.png" id="19_bj47h"]
+[ext_resource type="Texture2D" uid="uid://dje5t0khhdgsm" path="res://assets/images/face/brow_1.png" id="20_4lh0q"]
+[ext_resource type="Texture2D" uid="uid://bt1jv2x2a3dic" path="res://assets/images/clothes/sweater_1_torso.png" id="21_7qyni"]
+[ext_resource type="Texture2D" uid="uid://bvm7rtmruwqfk" path="res://assets/images/hair/hair_back_1.png" id="21_sougf"]
+[ext_resource type="Texture2D" uid="uid://c456vpdb8h7qk" path="res://assets/images/hair/hair_front_1.png" id="22_p478o"]
+
+[sub_resource type="Animation" id="Animation_sougf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body/ThighR/CalfR:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Body/ArmL/ForearmL:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Body/ThighL:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_p478o"]
+resource_name = "new_animation"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body/ThighR/CalfR:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.099999994),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.20135266]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Body/ArmL/ForearmL:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0009999999, 0.11),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.5065876]
+}
+
+[sub_resource type="Animation" id="Animation_2y1m1"]
+resource_name = "new_animation_2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body/ThighL:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.08629586]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2y1m1"]
+_data = {
+&"RESET": SubResource("Animation_sougf"),
+&"new_animation": SubResource("Animation_p478o"),
+&"new_animation_2": SubResource("Animation_2y1m1")
+}
+
+[node name="Character" type="Node2D" unique_id=1822629463]
+script = ExtResource("1_50cep")
+metadata/_edit_horizontal_guides_ = [684.0, 806.0, 397.0]
+
+[node name="Body" type="Node2D" parent="." unique_id=2067415978]
+
+[node name="ArmL" type="Sprite2D" parent="Body" unique_id=2082978615]
+position = Vector2(-80, -122.85718)
+texture = ExtResource("1_0dpix")
+offset = Vector2(80, 122.85718)
+
+[node name="ForearmL" type="Sprite2D" parent="Body/ArmL" unique_id=1470107945]
+position = Vector2(-214.28564, 305.71436)
+scale = Vector2(0.9999996, 0.9999996)
+texture = ExtResource("2_2hyy3")
+offset = Vector2(294.28564, -182.85718)
+
+[node name="HandL" type="Sprite2D" parent="Body/ArmL/ForearmL" unique_id=1018165855]
+position = Vector2(-125.714355, 160)
+scale = Vector2(0.99999976, 0.99999976)
+texture = ExtResource("3_irmqu")
+offset = Vector2(419.9995, -342.85742)
+
+[node name="Sprite2D" type="Sprite2D" parent="Body/ArmL/ForearmL/HandL" unique_id=1511034855]
+self_modulate = Color(0.8383095, 0.26480314, 0.5144139, 1)
+position = Vector2(420.00018, -342.85733)
+scale = Vector2(1.0000006, 1.0000006)
+texture = ExtResource("5_cicko")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Body/ArmL/ForearmL" unique_id=2105640021]
+self_modulate = Color(0.8098381, 0.23989493, 0.52270544, 1)
+position = Vector2(294.28574, -182.85724)
+scale = Vector2(1.0000004, 1.0000004)
+texture = ExtResource("6_bj47h")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Body/ArmL" unique_id=769164655]
+self_modulate = Color(0.8098381, 0.23989493, 0.52270544, 1)
+position = Vector2(67, 122.85718)
+scale = Vector2(0.9999993, 0.9999993)
+texture = ExtResource("7_4lh0q")
+
+[node name="ArmR" type="Sprite2D" parent="Body" unique_id=1591235438]
+position = Vector2(80, -122.85718)
+texture = ExtResource("1_0dpix")
+offset = Vector2(-80, 122.85718)
+flip_h = true
+
+[node name="ForearmR" type="Sprite2D" parent="Body/ArmR" unique_id=1810007801]
+position = Vector2(214.28564, 305.71436)
+scale = Vector2(0.99999905, 0.99999905)
+texture = ExtResource("2_2hyy3")
+offset = Vector2(-294.28638, -182.85718)
+flip_h = true
+
+[node name="HandR" type="Sprite2D" parent="Body/ArmR/ForearmR" unique_id=1086217996]
+position = Vector2(125.714355, 160.00012)
+scale = Vector2(0.9999997, 0.9999997)
+texture = ExtResource("3_irmqu")
+offset = Vector2(-420.0017, -342.85767)
+flip_h = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="Body/ArmR/ForearmR/HandR" unique_id=49527927]
+self_modulate = Color(0.8383095, 0.26480314, 0.5144139, 1)
+position = Vector2(-420.0004, -342.85754)
+scale = Vector2(1.0000011, 1.0000011)
+texture = ExtResource("5_cicko")
+flip_h = true
+
+[node name="Sprite2D3" type="Sprite2D" parent="Body/ArmR/ForearmR" unique_id=670577568]
+self_modulate = Color(0.8098381, 0.23989493, 0.52270544, 1)
+position = Vector2(-294.28595, -182.85733)
+scale = Vector2(1.0000008, 1.0000008)
+texture = ExtResource("6_bj47h")
+flip_h = true
+
+[node name="Sprite2D4" type="Sprite2D" parent="Body/ArmR" unique_id=2129566399]
+self_modulate = Color(0.8098381, 0.23989493, 0.52270544, 1)
+position = Vector2(-80, 122.85718)
+scale = Vector2(0.9999993, 0.9999993)
+texture = ExtResource("7_4lh0q")
+flip_h = true
+
+[node name="ThighL" type="Sprite2D" parent="Body" unique_id=645347708]
+position = Vector2(-114.28589, 411.4286)
+texture = ExtResource("4_7eonc")
+offset = Vector2(114.28589, -411.4286)
+
+[node name="CalfL" type="Sprite2D" parent="Body/ThighL" unique_id=81998833]
+position = Vector2(-45.71411, 348.5713)
+scale = Vector2(0.99999976, 0.99999976)
+texture = ExtResource("5_50cep")
+offset = Vector2(160, -760.00024)
+
+[node name="PantsCalfL" type="Sprite2D" parent="Body/ThighL/CalfL" unique_id=877085118]
+position = Vector2(160.00003, -760.00006)
+scale = Vector2(1.0000001, 1.0000001)
+texture = ExtResource("6_7eonc")
+
+[node name="PantsThighL" type="Sprite2D" parent="Body/ThighL" unique_id=81104277]
+position = Vector2(114.28589, -411.4286)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("7_50cep")
+
+[node name="ThighR" type="Sprite2D" parent="Body" unique_id=663793486]
+position = Vector2(114.28589, 411.4286)
+texture = ExtResource("4_7eonc")
+offset = Vector2(-114.28589, -411.4286)
+flip_h = true
+
+[node name="CalfR" type="Sprite2D" parent="Body/ThighR" unique_id=1357710693]
+position = Vector2(45.71411, 348.5713)
+scale = Vector2(0.99999976, 0.99999976)
+texture = ExtResource("5_50cep")
+offset = Vector2(-160.00024, -760.00024)
+flip_h = true
+
+[node name="PantsCalfR" type="Sprite2D" parent="Body/ThighR/CalfR" unique_id=522281464]
+position = Vector2(-160.00005, -760.00006)
+scale = Vector2(1.0000001, 1.0000001)
+texture = ExtResource("6_7eonc")
+flip_h = true
+
+[node name="PantsThighR" type="Sprite2D" parent="Body/ThighR" unique_id=760625098]
+position = Vector2(-114.28587, -411.4286)
+scale = Vector2(0.9999999, 0.9999999)
+texture = ExtResource("7_50cep")
+flip_h = true
+
+[node name="Neck" type="Sprite2D" parent="Body" unique_id=1334466696]
+position = Vector2(-2.8571763, -48.57166)
+scale = Vector2(0.99999976, 0.99999976)
+texture = ExtResource("7_lagn4")
+offset = Vector2(0, 48.572)
+
+[node name="Head" type="Sprite2D" parent="Body/Neck" unique_id=236267997]
+position = Vector2(0, -99.999756)
+texture = ExtResource("9_ih8y6")
+offset = Vector2(0, 148.571)
+
+[node name="EarL" type="Sprite2D" parent="Body/Neck/Head" unique_id=2102200154]
+z_index = -1
+position = Vector2(-360, -260.00012)
+texture = ExtResource("8_x8k1v")
+offset = Vector2(362.85718, 408.57153)
+
+[node name="EarR" type="Sprite2D" parent="Body/Neck/Head" unique_id=978575841]
+z_index = -1
+position = Vector2(365.71436, -260.00012)
+texture = ExtResource("8_x8k1v")
+offset = Vector2(-362.85718, 408.57153)
+flip_h = true
+
+[node name="EyeL" type="Sprite2D" parent="Body/Neck/Head" unique_id=1109737370]
+position = Vector2(-195.14287, -265.42865)
+
+[node name="EyeWhite" type="Sprite2D" parent="Body/Neck/Head/EyeL" unique_id=1467705062]
+clip_children = 2
+texture = ExtResource("12_ih8y6")
+offset = Vector2(198.00005, 414.0001)
+
+[node name="EyeIris" type="Sprite2D" parent="Body/Neck/Head/EyeL/EyeWhite" unique_id=1799792135]
+self_modulate = Color(0.49742538, 0.20289811, 0.13148296, 1)
+position = Vector2(19, 8)
+texture = ExtResource("13_rbud2")
+offset = Vector2(179.00005, 406.0001)
+
+[node name="EyePupil" type="Sprite2D" parent="Body/Neck/Head/EyeL/EyeWhite/EyeIris" unique_id=301029953]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(0, 15)
+texture = ExtResource("14_vovfy")
+offset = Vector2(179.00005, 391.0001)
+
+[node name="EyeLash" type="Sprite2D" parent="Body/Neck/Head/EyeL" unique_id=1839722307]
+self_modulate = Color(0, 0, 0, 1)
+z_index = 1
+position = Vector2(21, 23)
+texture = ExtResource("15_u0pwc")
+offset = Vector2(177.00005, 391.0001)
+
+[node name="EyeR" type="Sprite2D" parent="Body/Neck/Head" unique_id=932538571]
+position = Vector2(-195.14287, -265.42865)
+
+[node name="EyeWhite" type="Sprite2D" parent="Body/Neck/Head/EyeR" unique_id=243507368]
+clip_children = 2
+texture = ExtResource("12_ih8y6")
+offset = Vector2(198.00005, 414.0001)
+flip_h = true
+
+[node name="EyeIris" type="Sprite2D" parent="Body/Neck/Head/EyeR/EyeWhite" unique_id=1310384883]
+self_modulate = Color(0.49742538, 0.20289811, 0.13148296, 1)
+position = Vector2(19, 8)
+texture = ExtResource("13_rbud2")
+offset = Vector2(179.00005, 406.0001)
+flip_h = true
+
+[node name="EyePupil" type="Sprite2D" parent="Body/Neck/Head/EyeR/EyeWhite/EyeIris" unique_id=869354502]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(0, 15)
+texture = ExtResource("14_vovfy")
+offset = Vector2(179.00005, 391.0001)
+flip_h = true
+
+[node name="EyeLash" type="Sprite2D" parent="Body/Neck/Head/EyeR" unique_id=942854175]
+self_modulate = Color(0, 0, 0, 1)
+z_index = 1
+position = Vector2(21, 23)
+texture = ExtResource("15_u0pwc")
+offset = Vector2(177.00005, 391.0001)
+flip_h = true
+
+[node name="Mouth" type="Sprite2D" parent="Body/Neck/Head" unique_id=457347115]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(2.857177, 148.57143)
+texture = ExtResource("19_bj47h")
+
+[node name="BrowL" type="Sprite2D" parent="Body/Neck/Head" unique_id=810420139]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(2.857177, 148.57143)
+texture = ExtResource("20_4lh0q")
+
+[node name="BrowR" type="Sprite2D" parent="Body/Neck/Head" unique_id=1097071646]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(2.857177, 148.57143)
+texture = ExtResource("20_4lh0q")
+flip_h = true
+
+[node name="HairBack" type="Sprite2D" parent="Body/Neck/Head" unique_id=837012082]
+self_modulate = Color(0, 0, 0, 1)
+z_index = -2
+position = Vector2(2.857177, 148.57143)
+texture = ExtResource("21_sougf")
+
+[node name="HairFront" type="Sprite2D" parent="Body/Neck/Head" unique_id=38312919]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(2.857177, 148.57143)
+scale = Vector2(1.0000002, 1.0000002)
+texture = ExtResource("22_p478o")
+
+[node name="Torso" type="Sprite2D" parent="Body" unique_id=505009810]
+texture = ExtResource("6_8yvht")
+
+[node name="PantsTorso" type="Sprite2D" parent="Body/Torso" unique_id=1383961229]
+texture = ExtResource("12_8yvht")
+
+[node name="Sprite2D" type="Sprite2D" parent="Body/Torso" unique_id=2046502110]
+self_modulate = Color(0.8098381, 0.23989493, 0.52270544, 1)
+texture = ExtResource("21_7qyni")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1297651482]
+libraries/ = SubResource("AnimationLibrary_2y1m1")

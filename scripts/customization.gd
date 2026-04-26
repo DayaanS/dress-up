@@ -41,3 +41,7 @@ func _on_button_pressed() -> void:
 
 func _on_button_2_pressed() -> void:
 	character.set_pose("Pose 1")
+
+
+func _on_add_item_button_pressed() -> void:
+	character.add_item()

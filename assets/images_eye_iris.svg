@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="175.7701"
+   height="245.0392"
+   viewBox="0 0 46.505837 64.833287"
+   version="1.1"
+   id="svg5"
+   xml:space="preserve"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="assets.svg"
+   inkscape:export-filename="forearm.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+     id="namedview7"
+     pagecolor="#2c2c2c"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="0.25000001"
+     inkscape:cx="-289.99999"
+     inkscape:cy="1180"
+     inkscape:window-width="1920"
+     inkscape:window-height="1012"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showguides="true"><sodipodi:guide
+       position="27.233409,-346.91517"
+       orientation="0,1"
+       id="guide1344"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" /></sodipodi:namedview><defs
+     id="defs2" /><g
+     inkscape:groupmode="layer"
+     id="layer6"
+     inkscape:label="head"
+     style="display:inline"
+     transform="translate(-77.763581,-155.05988)"><path
+       style="display:inline;fill:#ffffff;stroke-width:0.264583"
+       d="m 101.52963,219.29896 c -15.270617,-3.90717 -29.098927,-37.62261 -21.722243,-52.962 6.708391,-13.94972 32.369803,-15.31542 39.304603,-2.09179 5.43724,10.36801 6.98626,37.27079 2.65286,46.07393 -3.65127,7.41742 -11.94936,11.0999 -20.23522,8.97986 z"
+       id="path852"
+       inkscape:label="eye_iris" /></g></svg>
