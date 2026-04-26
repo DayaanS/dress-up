@@ -32,7 +32,6 @@ func get_item_part_data(item_part_id):
 	
 func add_item_part(item:Item, item_part_data:ItemPart):
 	var item_part = ItemPartNode.new()
-	#var item_part_data = get_item_part_data(item_part_id)
 	item_part.sprite = item_part_data.sprite
 	item_part.color = item.colors[item_part_data.color_index]
 	item_part.pos_x = item_part_data.position_x

@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://i4fb6cnrbnha"]
 
 [ext_resource type="Script" uid="uid://eufbgfu7y686" path="res://scripts/customization.gd" id="1_k71u6"]
-[ext_resource type="PackedScene" uid="uid://bi75lf8klwh7l" path="res://scenes/characterOLD.tscn" id="2_ds3pn"]
 [ext_resource type="PackedScene" uid="uid://nc7j4mf7wqih" path="res://scenes/character.tscn" id="3_ds3pn"]
 
 [node name="Customization" type="Node2D" unique_id=1565179698]
@@ -12,11 +11,6 @@ z_index = -4
 offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0.8598237, 0.6421838, 0.66907465, 1)
-
-[node name="CharacterOLD" parent="." unique_id=1822629463 instance=ExtResource("2_ds3pn")]
-visible = false
-position = Vector2(1097, 520)
-scale = Vector2(0.35, 0.35)
 
 [node name="Character" parent="." unique_id=1928772576 instance=ExtResource("3_ds3pn")]
 position = Vector2(1226.9999, 590.99994)
