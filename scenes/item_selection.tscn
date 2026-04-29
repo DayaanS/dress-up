@@ -16,6 +16,10 @@ unique_name_in_owner = true
 layout_mode = 0
 offset_right = 500.0
 offset_bottom = 800.0
+select_mode = 1
+allow_reselect = true
 max_columns = 2
 same_column_width = true
 fixed_icon_size = Vector2i(100, 100)
+
+[connection signal="multi_selected" from="ItemList" to="." method="_on_item_list_multi_selected"]

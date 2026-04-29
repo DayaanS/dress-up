@@ -1,4 +1,5 @@
 extends Node2D
+class_name Character
 
 func set_color(color_name, color):
 	match color_name:
@@ -6,19 +7,6 @@ func set_color(color_name, color):
 			var parts = get_tree().get_nodes_in_group("skin")
 			for part in parts:
 				part.self_modulate = color
-		"Pants":
-			pass
-		"Eyes":
-			$Body/Neck/Head/EyeL/EyeWhite/EyeIris.self_modulate = color
-			$Body/Neck/Head/EyeR/EyeWhite/EyeIris.self_modulate = color
-		"Top":
-			$Body/ArmL/ForearmL/HandL/Sprite2D.self_modulate = color
-			$Body/ArmL/ForearmL/Sprite2D2.self_modulate = color
-			$Body/ArmL/Sprite2D3.self_modulate = color
-			$Body/ArmR/Sprite2D4.self_modulate = color
-			$Body/ArmR/ForearmR/Sprite2D3.self_modulate = color
-			$Body/ArmR/ForearmR/HandR/Sprite2D2.self_modulate = color
-			$Body/Torso/Sprite2D.self_modulate = color
 		"Hair":
 			var parts = get_tree().get_nodes_in_group("hair")
 			for part in parts:
@@ -39,11 +27,12 @@ func add_item_part(item:Item, item_part_data:ItemPart):
 	var parent = get_node("%"+item_part_data.parent_node_id)
 	parent.add_child(item_part)
 
-func add_item(item_id):
-	var resource_file = "res://data/items/" + item_id + ".tres"
-	var item:Item = load(resource_file) as Item
+func add_item(item):
+	#var resource_file = "res://data/items/" + item_id + ".tres"
+	#var item:Item = load(resource_file) as Item
 	for item_part_data in item.parts:
 		add_item_part(item, item_part_data)
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.

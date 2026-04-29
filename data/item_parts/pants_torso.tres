@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemPart" format=3 uid="uid://bqmk87oltx8av"]
+
+[ext_resource type="Script" uid="uid://83kjmk21x147" path="res://data/item_part.gd" id="1_e1c5p"]
+[ext_resource type="Texture2D" uid="uid://kmn5idwlocc0" path="res://images/clothing/pants_torso.svg" id="2_djc1k"]
+
+[resource]
+script = ExtResource("1_e1c5p")
+name = "Pants torso"
+sprite = ExtResource("2_djc1k")
+parent_node_id = "Torso"
+metadata/_custom_type_script = "uid://83kjmk21x147"

@@ -158,19 +158,23 @@ texture = ExtResource("15_imt6f")
 flip_h = true
 
 [node name="ThighL" type="Sprite2D" parent="Skeleton" unique_id=431220783 groups=["skin"]]
+unique_name_in_owner = true
 position = Vector2(-115, 227)
 texture = ExtResource("16_ofy33")
 
-[node name="Calf" type="Sprite2D" parent="Skeleton/ThighL" unique_id=957690318 groups=["skin"]]
+[node name="CalfL" type="Sprite2D" parent="Skeleton/ThighL" unique_id=957690318 groups=["skin"]]
+unique_name_in_owner = true
 position = Vector2(-41, 338)
 texture = ExtResource("17_3et6r")
 
 [node name="ThighR" type="Sprite2D" parent="Skeleton" unique_id=164526085 groups=["skin"]]
+unique_name_in_owner = true
 position = Vector2(115, 227)
 texture = ExtResource("16_ofy33")
 flip_h = true
 
-[node name="Calf" type="Sprite2D" parent="Skeleton/ThighR" unique_id=773822009 groups=["skin"]]
+[node name="CalfR" type="Sprite2D" parent="Skeleton/ThighR" unique_id=773822009 groups=["skin"]]
+unique_name_in_owner = true
 position = Vector2(41, 338)
 texture = ExtResource("17_3et6r")
 flip_h = true

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://i4fb6cnrbnha"]
 
 [ext_resource type="Script" uid="uid://eufbgfu7y686" path="res://scripts/customization.gd" id="1_k71u6"]
+[ext_resource type="PackedScene" uid="uid://dxrjlcibhqt8i" path="res://scenes/item_selection.tscn" id="3_cb7s4"]
 [ext_resource type="PackedScene" uid="uid://nc7j4mf7wqih" path="res://scenes/character.tscn" id="3_ds3pn"]
 
 [node name="Customization" type="Node2D" unique_id=1565179698]
@@ -104,6 +105,14 @@ text = "Pose 1"
 [node name="AddItemButton" type="Button" parent="UI/VBoxContainer" unique_id=1992211870]
 layout_mode = 2
 text = "Dress 1"
+
+[node name="ItemSelection" parent="UI" unique_id=1754921532 node_paths=PackedStringArray("character") instance=ExtResource("3_cb7s4")]
+layout_mode = 1
+offset_left = 514.0
+offset_top = 176.0
+offset_right = 514.0
+offset_bottom = 176.0
+character = NodePath("../../Character")
 
 [connection signal="color_changed" from="UI/VBoxContainer/SkinHBoxContainer/SkinColorPickerButton" to="." method="_on_skin_color_picker_button_color_changed"]
 [connection signal="color_changed" from="UI/VBoxContainer/PantsHBoxContainer/PantsColorPickerButton" to="." method="_on_pants_color_picker_button_color_changed"]

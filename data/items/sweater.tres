@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://b30xrdu0ofmcr"]
+
+[ext_resource type="Script" uid="uid://83kjmk21x147" path="res://data/item_part.gd" id="1_pxayi"]
+[ext_resource type="Texture2D" uid="uid://waanc2l27xmk" path="res://icon.svg" id="1_yu0ss"]
+[ext_resource type="Script" uid="uid://c18v5m8wr0nyo" path="res://data/item.gd" id="2_yu0ss"]
+
+[resource]
+script = ExtResource("2_yu0ss")
+name = "V Neck Sweater"
+category = "Tops"
+icon = ExtResource("1_yu0ss")
+colors = Array[Color]([Color(0.87234867, 0.31611004, 0.59268516, 1)])
+metadata/_custom_type_script = "uid://c18v5m8wr0nyo"
