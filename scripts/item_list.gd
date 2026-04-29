@@ -3,6 +3,7 @@ extends Control
 @onready var item_list: ItemList = %ItemList
 @export var character: Character
 var all_items:Array[Item] = []
+var selected_items:Array[Item] = []
 
 func get_items(items_array:Array):
 	#var all_items:Array[Item] = []

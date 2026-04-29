@@ -5,7 +5,6 @@
 
 [resource]
 script = ExtResource("1_e1c5p")
-name = "Pants torso"
 sprite = ExtResource("2_djc1k")
 parent_node_id = "Torso"
 metadata/_custom_type_script = "uid://83kjmk21x147"

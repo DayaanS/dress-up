@@ -24,12 +24,11 @@ func add_item_part(item:Item, item_part_data:ItemPart):
 	item_part.color = item.colors[item_part_data.color_index]
 	item_part.pos_x = item_part_data.position_x
 	item_part.pos_y = item_part_data.position_y
+	item_part.is_flip_h = item_part_data.flip_h
 	var parent = get_node("%"+item_part_data.parent_node_id)
 	parent.add_child(item_part)
 
 func add_item(item):
-	#var resource_file = "res://data/items/" + item_id + ".tres"
-	#var item:Item = load(resource_file) as Item
 	for item_part_data in item.parts:
 		add_item_part(item, item_part_data)
 

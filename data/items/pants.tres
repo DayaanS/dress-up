@@ -6,12 +6,14 @@
 [ext_resource type="Resource" uid="uid://bqmk87oltx8av" path="res://data/item_parts/pants_torso.tres" id="3_70uhc"]
 [ext_resource type="Resource" uid="uid://besyvhdl2ww80" path="res://data/item_parts/pants_thigh.tres" id="4_03dgl"]
 [ext_resource type="Resource" uid="uid://cj5kug5774ftf" path="res://data/item_parts/pants_calf.tres" id="5_72dvx"]
+[ext_resource type="Resource" uid="uid://0tmd1kow3f5b" path="res://data/item_parts/pants_thigh_r.tres" id="6_03dgl"]
+[ext_resource type="Resource" uid="uid://crd0u14aqwknt" path="res://data/item_parts/pants_calf_r.tres" id="7_72dvx"]
 
 [resource]
 script = ExtResource("2_yjeuv")
 name = "Pants"
 category = "Bottoms"
 icon = ExtResource("1_dnehm")
-parts = Array[ExtResource("1_pgafs")]([ExtResource("3_70uhc"), ExtResource("4_03dgl"), ExtResource("5_72dvx")])
+parts = Array[ExtResource("1_pgafs")]([ExtResource("3_70uhc"), ExtResource("4_03dgl"), ExtResource("5_72dvx"), ExtResource("6_03dgl"), ExtResource("7_72dvx")])
 colors = Array[Color]([Color(0.1268841, 0.26610073, 0.3700716, 1)])
 metadata/_custom_type_script = "uid://c18v5m8wr0nyo"

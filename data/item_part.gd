@@ -7,3 +7,4 @@ class_name ItemPart
 @export var color_index: int
 @export var position_x: float
 @export var position_y: float
+@export var flip_h: bool
