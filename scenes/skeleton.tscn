@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://bygkaghwhpgbu"]
+
+[ext_resource type="Script" uid="uid://dk1k63cgf7t8x" path="res://scripts/character.gd" id="1_pbvs3"]
+
+[node name="Skeleton" type="Node2D" unique_id=1248511463]
+script = ExtResource("1_pbvs3")
+
+[node name="Neck" type="Sprite2D" parent="." unique_id=335162378 groups=["skin"]]
+self_modulate = Color(0.54901963, 0.54901963, 0.54901963, 1)
+position = Vector2(0, -265)
+
+[node name="Head" type="Sprite2D" parent="Neck" unique_id=973461026 groups=["skin"]]
+position = Vector2(0, -75)
+
+[node name="ArmL" type="Sprite2D" parent="." unique_id=517647472 groups=["skin"]]
+position = Vector2(-130, -243)
+metadata/armPosX = -128
+metadata/armPosY = -267
+
+[node name="Forearm" type="Sprite2D" parent="ArmL" unique_id=804297591 groups=["skin"]]
+position = Vector2(-184, 245)
+
+[node name="Hand" type="Sprite2D" parent="ArmL/Forearm" unique_id=698670171 groups=["skin"]]
+position = Vector2(-121, 160)
+
+[node name="ArmR" type="Sprite2D" parent="." unique_id=680181431 groups=["skin"]]
+position = Vector2(130, -243)
+flip_h = true
+metadata/armPosX = -128
+metadata/armPosY = -267
+
+[node name="Forearm" type="Sprite2D" parent="ArmR" unique_id=241466204 groups=["skin"]]
+position = Vector2(184, 245)
+flip_h = true
+
+[node name="Hand" type="Sprite2D" parent="ArmR/Forearm" unique_id=1540263485 groups=["skin"]]
+position = Vector2(121, 160)
+flip_h = true
+
+[node name="ThighL" type="Sprite2D" parent="." unique_id=1192881206 groups=["skin"]]
+unique_name_in_owner = true
+position = Vector2(-115, 227)
+
+[node name="CalfL" type="Sprite2D" parent="ThighL" unique_id=1349639707 groups=["skin"]]
+unique_name_in_owner = true
+position = Vector2(-41, 338)
+
+[node name="ThighR" type="Sprite2D" parent="." unique_id=1797366373 groups=["skin"]]
+unique_name_in_owner = true
+position = Vector2(115, 227)
+flip_h = true
+
+[node name="CalfR" type="Sprite2D" parent="ThighR" unique_id=785145427 groups=["skin"]]
+unique_name_in_owner = true
+position = Vector2(41, 338)
+flip_h = true
+
+[node name="Torso" type="Sprite2D" parent="." unique_id=420369955 groups=["skin"]]
+unique_name_in_owner = true
+self_modulate = Color(0.5489626, 0.5489626, 0.54896253, 1)

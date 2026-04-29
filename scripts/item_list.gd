@@ -2,8 +2,10 @@ extends Control
 
 @onready var item_list: ItemList = %ItemList
 @export var character: Character
+@export var root: Node
 var all_items:Array[Item] = []
 var selected_items:Array[Item] = []
+var character_scene = preload("res://scenes/skeleton.tscn")
 
 func get_items(items_array:Array):
 	#var all_items:Array[Item] = []
@@ -24,10 +26,17 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	pass
 
+func add_layer():
+	var instance:Character = character_scene.instantiate()
+	instance.scale = character.scale
+	instance.position = character.position
+	root.add_child(instance)
+	return instance
 
 func _on_item_list_multi_selected(index: int, selected: bool) -> void:
+	var layer = add_layer()
 	if selected == true:
-		character.add_item(all_items[index])
+		layer.add_item(all_items[index])
 	else:
 		pass
 	

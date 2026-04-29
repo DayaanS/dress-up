@@ -32,7 +32,7 @@ func _on_eyes_color_picker_button_color_changed(color: Color) -> void:
 func _on_top_color_picker_button_color_changed(color: Color) -> void:
 	character.set_color("Top",color)
 	
-	
+
 
 
 
