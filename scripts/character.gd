@@ -11,7 +11,7 @@ func set_color(color_name, color):
 			var parts = get_tree().get_nodes_in_group("hair")
 			for part in parts:
 				part.self_modulate = color
-				
+
 
 func get_item_part_data(item_part_id):
 	var resource_file = "res://data/item_parts/" + item_part_id + ".tres"
