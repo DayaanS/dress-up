@@ -12,7 +12,6 @@ func set_color(color_name, color):
 			for part in parts:
 				part.self_modulate = color
 
-
 func get_item_part_data(item_part_id):
 	var resource_file = "res://data/item_parts/" + item_part_id + ".tres"
 	var item_part:ItemPart = load(resource_file) as ItemPart

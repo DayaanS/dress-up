@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dxrjlcibhqt8i"]
 
-[ext_resource type="Script" uid="uid://dkbsaqcwkpw7c" path="res://scripts/item_list.gd" id="1_a5dp0"]
+[ext_resource type="Script" uid="uid://dkbsaqcwkpw7c" path="res://scripts/item_selection.gd" id="1_a5dp0"]
 
 [node name="ItemSelection" type="Control" unique_id=1754921532]
 layout_mode = 3
@@ -15,7 +15,7 @@ script = ExtResource("1_a5dp0")
 unique_name_in_owner = true
 layout_mode = 0
 offset_right = 500.0
-offset_bottom = 800.0
+offset_bottom = 500.0
 select_mode = 2
 max_columns = 2
 same_column_width = true

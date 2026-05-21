@@ -7,6 +7,7 @@ var character_scene = preload("res://scenes/skeleton.tscn")
 var all_items:Array[Item] = []
 var selected_items:Dictionary = {}
 
+@onready var item_color_selection: Control = $"../ItemColorSelection"
 
 func get_items(items_array):
 	for file in DirAccess.get_files_at("res://data/items"):
@@ -28,10 +29,12 @@ func _on_item_list_multi_selected(index: int, selected: bool) -> void:
 	if selected == true:
 		var layer:Character = add_layer()
 		layer.add_item(all_items[index])
+		item_color_selection.add_item_colors(all_items[index])
 		selected_items[index] = layer
 	else:
 		selected_items[index].queue_free()
-		
+		item_color_selection.remove_item_colors()
+	
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

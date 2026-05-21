@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://nc7j4mf7wqih"]
 
 [ext_resource type="Script" uid="uid://dk1k63cgf7t8x" path="res://scripts/character.gd" id="1_50cep"]
-[ext_resource type="Texture2D" uid="uid://73dtqqe51t2" path="res://images/reference.svg" id="1_rbud2"]
 [ext_resource type="Texture2D" uid="uid://cw3rkyv8fdahu" path="res://images/body/head.svg" id="3_u0pwc"]
 [ext_resource type="Texture2D" uid="uid://bbs3jldstffc0" path="res://images/body/neck.svg" id="3_vovfy"]
 [ext_resource type="Texture2D" uid="uid://bwrogv8x3ncs4" path="res://images/hair/hair_back.svg" id="4_cicko"]
@@ -22,13 +21,6 @@
 
 [node name="Character" type="Node2D" unique_id=1928772576]
 script = ExtResource("1_50cep")
-
-[node name="Reference" type="Sprite2D" parent="." unique_id=1854748173]
-visible = false
-modulate = Color(1, 1, 1, 0.27058825)
-self_modulate = Color(1, 0.29000002, 0.29000002, 1)
-position = Vector2(0, -86)
-texture = ExtResource("1_rbud2")
 
 [node name="Skeleton" type="Node2D" parent="." unique_id=1079405953]
 
@@ -181,5 +173,4 @@ flip_h = true
 
 [node name="Torso" type="Sprite2D" parent="Skeleton" unique_id=1326883433 groups=["skin"]]
 unique_name_in_owner = true
-self_modulate = Color(0.5489626, 0.5489626, 0.54896253, 1)
 texture = ExtResource("18_so3kc")

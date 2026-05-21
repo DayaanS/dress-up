@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cylmwkldhow7j"]
+
+[ext_resource type="Script" uid="uid://bhj4435eswfn5" path="res://scripts/item_part_color_selection.gd" id="1_42pv7"]
+
+[node name="ItemPartColorSelection" type="HBoxContainer" unique_id=513319310]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_42pv7")
+
+[node name="Label" type="Label" parent="." unique_id=683382415]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="." unique_id=1749422445]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
