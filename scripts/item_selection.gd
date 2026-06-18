@@ -9,6 +9,7 @@ var selected_items:Dictionary = {}
 
 @onready var item_color_selection: Control = $"../ItemColorSelection"
 
+# populates item selection with items
 func get_items(items_array):
 	for file in DirAccess.get_files_at("res://data/items"):
 		var resource_file = "res://data/items/" + file

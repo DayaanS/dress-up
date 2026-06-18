@@ -14,3 +14,5 @@ layout_mode = 2
 [node name="ColorPickerButton" type="ColorPickerButton" parent="." unique_id=1749422445]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
+
+[connection signal="color_changed" from="ColorPickerButton" to="." method="_on_color_picker_button_color_changed"]

@@ -25,7 +25,7 @@ script = ExtResource("1_50cep")
 [node name="Skeleton" type="Node2D" parent="." unique_id=1079405953]
 
 [node name="Neck" type="Sprite2D" parent="Skeleton" unique_id=1442281354 groups=["skin"]]
-self_modulate = Color(0.54901963, 0.54901963, 0.54901963, 1)
+self_modulate = Color(0.728822, 0.728822, 0.728822, 1)
 position = Vector2(0, -265)
 texture = ExtResource("3_vovfy")
 

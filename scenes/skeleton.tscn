@@ -6,34 +6,40 @@
 script = ExtResource("1_pbvs3")
 
 [node name="Neck" type="Sprite2D" parent="." unique_id=335162378]
-self_modulate = Color(0.54901963, 0.54901963, 0.54901963, 1)
+unique_name_in_owner = true
 position = Vector2(0, -265)
 
 [node name="Head" type="Sprite2D" parent="Neck" unique_id=973461026]
 position = Vector2(0, -75)
 
 [node name="ArmL" type="Sprite2D" parent="." unique_id=517647472]
+unique_name_in_owner = true
 position = Vector2(-130, -243)
 metadata/armPosX = -128
 metadata/armPosY = -267
 
-[node name="Forearm" type="Sprite2D" parent="ArmL" unique_id=804297591]
+[node name="ForearmL" type="Sprite2D" parent="ArmL" unique_id=804297591]
+unique_name_in_owner = true
 position = Vector2(-184, 245)
 
-[node name="Hand" type="Sprite2D" parent="ArmL/Forearm" unique_id=698670171]
+[node name="HandL" type="Sprite2D" parent="ArmL/ForearmL" unique_id=698670171]
+unique_name_in_owner = true
 position = Vector2(-121, 160)
 
 [node name="ArmR" type="Sprite2D" parent="." unique_id=680181431]
+unique_name_in_owner = true
 position = Vector2(130, -243)
 flip_h = true
 metadata/armPosX = -128
 metadata/armPosY = -267
 
-[node name="Forearm" type="Sprite2D" parent="ArmR" unique_id=241466204]
+[node name="ForearmR" type="Sprite2D" parent="ArmR" unique_id=241466204]
+unique_name_in_owner = true
 position = Vector2(184, 245)
 flip_h = true
 
-[node name="Hand" type="Sprite2D" parent="ArmR/Forearm" unique_id=1540263485]
+[node name="HandR" type="Sprite2D" parent="ArmR/ForearmR" unique_id=1540263485]
+unique_name_in_owner = true
 position = Vector2(121, 160)
 flip_h = true
 

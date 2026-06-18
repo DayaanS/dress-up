@@ -31,6 +31,8 @@ func add_item(item):
 	for item_part_data in item.parts:
 		add_item_part(item, item_part_data)
 
+func set_item_part_color(item_part_node:ItemPartNode, new_color: Color):
+	item_part_node.color = new_color
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.

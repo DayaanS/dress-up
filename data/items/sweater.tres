@@ -3,11 +3,19 @@
 [ext_resource type="Script" uid="uid://83kjmk21x147" path="res://data/item_part.gd" id="1_pxayi"]
 [ext_resource type="Texture2D" uid="uid://waanc2l27xmk" path="res://icon.svg" id="1_yu0ss"]
 [ext_resource type="Script" uid="uid://c18v5m8wr0nyo" path="res://data/item.gd" id="2_yu0ss"]
+[ext_resource type="Resource" uid="uid://cct6iyv4iun42" path="res://data/item_parts/sweater_torso.tres" id="3_e1mn7"]
+[ext_resource type="Resource" uid="uid://b35njdk3x6ues" path="res://data/item_parts/sweater_arm.tres" id="4_5lbe8"]
+[ext_resource type="Resource" uid="uid://bskprgyowcyhh" path="res://data/item_parts/sweater_arm_r.tres" id="5_cdtr7"]
+[ext_resource type="Resource" uid="uid://b5sgx4fp3l2rr" path="res://data/item_parts/sweater_forearm.tres" id="6_6tomb"]
+[ext_resource type="Resource" uid="uid://c7jooid8pvfns" path="res://data/item_parts/sweater_forearm_r.tres" id="7_hwsig"]
+[ext_resource type="Resource" uid="uid://bvui1612el3nu" path="res://data/item_parts/sweater_hand.tres" id="8_37m0o"]
+[ext_resource type="Resource" uid="uid://dyrywkw4ehm6" path="res://data/item_parts/sweater_hand_r.tres" id="9_jantx"]
 
 [resource]
 script = ExtResource("2_yu0ss")
 name = "V Neck Sweater"
 category = "Tops"
 icon = ExtResource("1_yu0ss")
-colors = Array[Color]([Color(0.87234867, 0.31611004, 0.59268516, 1)])
+parts = Array[ExtResource("1_pxayi")]([ExtResource("3_e1mn7"), ExtResource("4_5lbe8"), ExtResource("5_cdtr7"), ExtResource("6_6tomb"), ExtResource("7_hwsig"), ExtResource("8_37m0o"), ExtResource("9_jantx")])
+colors = Array[Color]([Color(0.7507263, 0.5813518, 0.47040427, 1)])
 metadata/_custom_type_script = "uid://c18v5m8wr0nyo"

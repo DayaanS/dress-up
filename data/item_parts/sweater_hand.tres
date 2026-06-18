@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemPart" format=3 uid="uid://bvui1612el3nu"]
+
+[ext_resource type="Script" uid="uid://83kjmk21x147" path="res://data/item_part.gd" id="1_jhyl0"]
+[ext_resource type="Texture2D" uid="uid://cpfwwtdyyw35d" path="res://images/clothing/sweater_hand.svg" id="2_jhyl0"]
+
+[resource]
+script = ExtResource("1_jhyl0")
+name = "Sweater"
+sprite = ExtResource("2_jhyl0")
+parent_node_id = "HandL"
+metadata/_custom_type_script = "uid://83kjmk21x147"

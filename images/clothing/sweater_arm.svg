@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="160.47934mm"
+   height="192.39529mm"
+   viewBox="0 0 160.47934 192.3953"
+   version="1.1"
+   id="svg2053"
+   inkscape:export-filename="bitmap.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="sweater_arm.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview2055"
+     pagecolor="#5a5a5a"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.4609989"
+     inkscape:cx="142.36835"
+     inkscape:cy="386.72171"
+     inkscape:window-width="1920"
+     inkscape:window-height="1012"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2050" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-10.763917,-12.912147)">
+    <path
+       style="display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.254701"
+       d="m 38.68819,204.43763 c -7.453579,-1.15607 -14.608642,-5.43728 -19.571002,-11.35812 -5.238541,-5.13176 -7.398197,-12.50037 -7.439115,-19.70227 -0.493233,-5.21751 -0.08477,-10.61914 2.36109,-15.29753 2.415735,-5.50902 7.300773,-9.86262 11.650678,-14.12487 10.412786,-10.49017 19.91399,-21.84985 30.423806,-32.23618 8.439019,-7.14019 16.47454,-15.206926 26.664361,-19.830622 7.747104,-3.61364 16.912335,-4.947576 23.857572,0.914097 5.32818,5.289902 3.91816,12.711185 3.564,20.402725 -0.407,8.83891 -2.02697,17.39451 -5.06264,25.62522 -3.04293,7.65666 -6.090663,15.3919 -11.080847,22.03753 -5.107174,7.53132 -10.50464,14.46109 -16.219914,21.91659 -5.110745,6.27046 -9.415422,13.66979 -16.754498,17.57857 -3.63487,2.26889 -7.978156,2.94444 -12.34372,3.78306 -3.721218,0.57253 -6.677365,0.81487 -10.049771,0.2918 z"
+       id="path732"
+       inkscape:label="sweater_arm"
+       inkscape:transform-center-x="28.949942"
+       inkscape:transform-center-y="37.616339"
+       sodipodi:nodetypes="sscccsssssccccs" />
+  </g>
+</svg>

@@ -3,7 +3,7 @@ extends Control
 @onready var color_list: VBoxContainer = $VBoxContainer
 
 var item_part_color_selection = preload("res://scenes/item_part_color_selection.tscn")
-
+ 
 func add_item_colors(item:Item):
 	for i in len(item.colors):
 		var item_part_color_selection_instance = item_part_color_selection.instantiate()

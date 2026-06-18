@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="128.61761mm"
+   height="132.69994mm"
+   viewBox="0 0 128.61761 132.69993"
+   version="1.1"
+   id="svg2053"
+   inkscape:export-filename="hair_front.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="sweater_forearm.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview2055"
+     pagecolor="#5a5a5a"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.0330822"
+     inkscape:cx="66.306437"
+     inkscape:cy="398.8066"
+     inkscape:window-width="1920"
+     inkscape:window-height="1012"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2050" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-27.523123,1.9227293)">
+    <path
+       style="display:inline;fill:#ffffff;fill-opacity:0.98783;stroke-width:0.254701"
+       d="m 69.394678,126.13294 c -6.814164,-1.29058 -13.351147,-4.12592 -19.402466,-7.512 C 42.0146,113.11222 34.713458,106.15018 30.640383,97.207585 29.714611,95.09696 29.000392,93.701624 28.356841,90.74864 c -0.363049,-4.429608 0.148381,-8.864488 1.86699,-12.989353 2.12533,-7.340609 9.552363,-10.933192 14.705689,-15.895909 5.355755,-5.169595 11.930036,-8.785763 17.506342,-13.66577 2.47637,-1.82464 5.330351,-2.788263 7.988369,-4.019911 4.985024,-1.498893 10.325627,-1.414196 15.465262,-0.912586 3.119606,0.304462 6.220101,1.233843 9.10272,2.358437 3.301135,1.479212 6.207287,3.666849 8.872097,6.18734 2.82567,2.551973 5.56353,5.704913 7.11643,9.289763 3.52748,6.253685 2.45791,13.613976 2.52552,20.473151 -0.37936,4.573272 -2.37333,8.831771 -3.23021,13.329913 -1.64811,6.747615 -3.79926,13.441905 -6.97634,19.629375 -1.89049,3.81192 -5.050397,6.69337 -8.878673,8.49459 -2.885496,1.4327 -6.005704,2.70417 -9.185105,3.1839 -6.266653,0.1476 -10.653005,0.904 -15.841254,-0.0786 z"
+       id="path734"
+       inkscape:label="sweater_forearm"
+       inkscape:transform-center-x="20.901731"
+       inkscape:transform-center-y="20.316783"
+       sodipodi:nodetypes="acccccccacccccccca" />
+  </g>
+</svg>
