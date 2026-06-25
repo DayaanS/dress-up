@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dxrjlcibhqt8i"]
 
 [ext_resource type="Script" uid="uid://dkbsaqcwkpw7c" path="res://scripts/item_selection.gd" id="1_a5dp0"]
+[ext_resource type="Theme" uid="uid://cdvgy38nflwke" path="res://data/ui_theme.tres" id="2_47dkk"]
 
 [node name="ItemSelection" type="Control" unique_id=1754921532]
 layout_mode = 3
@@ -11,14 +12,47 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_a5dp0")
 
-[node name="ItemList" type="ItemList" parent="." unique_id=139898182]
+[node name="TabContainer" type="TabContainer" parent="." unique_id=616885189]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 0
+
+[node name="ItemList" type="ItemList" parent="TabContainer" unique_id=139898182]
 unique_name_in_owner = true
-layout_mode = 0
-offset_right = 500.0
-offset_bottom = 500.0
+layout_mode = 2
+theme = ExtResource("2_47dkk")
 select_mode = 2
 max_columns = 2
 same_column_width = true
 fixed_icon_size = Vector2i(100, 100)
+metadata/_tab_index = 0
 
-[connection signal="multi_selected" from="ItemList" to="." method="_on_item_list_multi_selected"]
+[node name="HairFront" type="ItemList" parent="TabContainer" unique_id=1551341964]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme = ExtResource("2_47dkk")
+select_mode = 2
+max_columns = 2
+same_column_width = true
+fixed_icon_size = Vector2i(100, 100)
+metadata/_tab_index = 1
+
+[node name="HairBack" type="ItemList" parent="TabContainer" unique_id=312190218]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme = ExtResource("2_47dkk")
+select_mode = 2
+max_columns = 2
+same_column_width = true
+fixed_icon_size = Vector2i(100, 100)
+metadata/_tab_index = 2
+
+[connection signal="multi_selected" from="TabContainer/ItemList" to="." method="_on_item_list_multi_selected"]
+[connection signal="multi_selected" from="TabContainer/HairFront" to="." method="_on_hair_front_multi_selected"]
+[connection signal="multi_selected" from="TabContainer/HairBack" to="." method="_on_hair_back_multi_selected"]

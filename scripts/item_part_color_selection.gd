@@ -17,4 +17,5 @@ func _process(delta: float) -> void:
 
 
 func _on_color_picker_button_color_changed(color: Color) -> void:
-	layer.set_color("color",color)
+	pass
+	#layer.set_color("color",color)

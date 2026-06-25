@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://bgv2licka1l87"]
+
+[ext_resource type="Texture2D" uid="uid://waanc2l27xmk" path="res://icon.svg" id="1_xiqdd"]
+[ext_resource type="Script" uid="uid://83kjmk21x147" path="res://data/item_part.gd" id="2_dp2u0"]
+[ext_resource type="Texture2D" uid="uid://bobwsboon05wp" path="res://images/hair/hair_front.svg" id="3_wm0fr"]
+[ext_resource type="Script" uid="uid://c18v5m8wr0nyo" path="res://data/item.gd" id="4_ffvcb"]
+
+[sub_resource type="Resource" id="Resource_bj408"]
+script = ExtResource("2_dp2u0")
+name = "Bangs"
+sprite = ExtResource("3_wm0fr")
+parent_node_id = "Head"
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[resource]
+script = ExtResource("4_ffvcb")
+icon = ExtResource("1_xiqdd")
+parts = Array[ExtResource("2_dp2u0")]([SubResource("Resource_bj408")])
+colors = Array[Color]([Color(0, 0, 0, 1)])
+metadata/_custom_type_script = "uid://c18v5m8wr0nyo"

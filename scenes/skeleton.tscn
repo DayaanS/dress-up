@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://dk1k63cgf7t8x" path="res://scripts/character.gd" id="1_pbvs3"]
 
+[sub_resource type="AnimationRootNode" id="AnimationRootNode_pbvs3"]
+
 [node name="Skeleton" type="Node2D" unique_id=1248511463]
 script = ExtResource("1_pbvs3")
 
@@ -10,6 +12,7 @@ unique_name_in_owner = true
 position = Vector2(0, -265)
 
 [node name="Head" type="Sprite2D" parent="Neck" unique_id=973461026]
+unique_name_in_owner = true
 position = Vector2(0, -75)
 
 [node name="ArmL" type="Sprite2D" parent="." unique_id=517647472]
@@ -64,3 +67,10 @@ flip_h = true
 [node name="Torso" type="Sprite2D" parent="." unique_id=420369955]
 unique_name_in_owner = true
 self_modulate = Color(0.5489626, 0.5489626, 0.54896253, 1)
+
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=1132662506]
+root_node = NodePath(".")
+tree_root = SubResource("AnimationRootNode_pbvs3")
+anim_player = NodePath("AnimationPlayer")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimationTree" unique_id=390802051]

@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://cwiw8cdbsjjcn"]
+
+[ext_resource type="Theme" uid="uid://cdvgy38nflwke" path="res://data/ui_theme.tres" id="1_tbnyn"]
+[ext_resource type="Script" uid="uid://dv8sywmgooexr" path="res://scripts/layers_ordering.gd" id="2_6mf45"]
+[ext_resource type="Script" uid="uid://dk1k63cgf7t8x" path="res://scripts/character.gd" id="3_i3hbl"]
+
+[node name="LayersUI" type="Control" unique_id=136292836]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_tbnyn")
+script = ExtResource("2_6mf45")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1576420385]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemList" type="ItemList" parent="VBoxContainer" unique_id=2001194673]
+layout_mode = 2
+size_flags_vertical = 3
+select_mode = 1
+fixed_icon_size = Vector2i(100, 100)
+
+[node name="ToTop" type="Button" parent="VBoxContainer" unique_id=587294994]
+layout_mode = 2
+text = "To Top"
+
+[node name="Up" type="Button" parent="VBoxContainer" unique_id=191865496]
+layout_mode = 2
+text = "up"
+
+[node name="Down" type="Button" parent="VBoxContainer" unique_id=1163882511]
+layout_mode = 2
+text = "down"
+
+[node name="ToBottom" type="Button" parent="VBoxContainer" unique_id=1387232920]
+layout_mode = 2
+text = "To Bottom"
+
+[node name="LayersParent" type="Node2D" parent="." unique_id=2105855168]
+
+[node name="Character" type="Node2D" parent="LayersParent" unique_id=1296781245]
+script = ExtResource("3_i3hbl")
+metadata/_custom_type_script = "uid://dk1k63cgf7t8x"
+
+[node name="Character2" type="Node2D" parent="LayersParent" unique_id=1769899271]
+script = ExtResource("3_i3hbl")
+metadata/_custom_type_script = "uid://dk1k63cgf7t8x"
+
+[node name="Character3" type="Node2D" parent="LayersParent" unique_id=808174429]
+script = ExtResource("3_i3hbl")
+metadata/_custom_type_script = "uid://dk1k63cgf7t8x"
+
+[node name="Character4" type="Node2D" parent="LayersParent" unique_id=1303645569]
+script = ExtResource("3_i3hbl")
+metadata/_custom_type_script = "uid://dk1k63cgf7t8x"
+
+[node name="Character5" type="Node2D" parent="LayersParent" unique_id=1568900182]
+script = ExtResource("3_i3hbl")
+metadata/_custom_type_script = "uid://dk1k63cgf7t8x"
+
+[connection signal="multi_selected" from="VBoxContainer/ItemList" to="." method="_on_item_list_multi_selected"]
+[connection signal="pressed" from="VBoxContainer/ToTop" to="." method="_on_to_top_pressed"]
+[connection signal="pressed" from="VBoxContainer/Up" to="." method="_on_up_pressed"]
+[connection signal="pressed" from="VBoxContainer/Down" to="." method="_on_down_pressed"]
+[connection signal="pressed" from="VBoxContainer/ToBottom" to="." method="_on_to_bottom_pressed"]

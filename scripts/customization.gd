@@ -11,23 +11,3 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass
-
-
-func _on_skin_color_picker_button_color_changed(color: Color) -> void:
-	character.set_color("Skin", color)
-
-
-func _on_pants_color_picker_button_color_changed(color: Color) -> void:
-	character.set_color("Pants",color)
-
-
-func _on_hair_color_picker_button_color_changed(color: Color) -> void:
-	character.set_color("Hair",color)
-
-
-func _on_eyes_color_picker_button_color_changed(color: Color) -> void:
-	character.set_color("Eyes",color)
-
-
-func _on_top_color_picker_button_color_changed(color: Color) -> void:
-	character.set_color("Top",color)

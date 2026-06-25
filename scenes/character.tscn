@@ -3,8 +3,6 @@
 [ext_resource type="Script" uid="uid://dk1k63cgf7t8x" path="res://scripts/character.gd" id="1_50cep"]
 [ext_resource type="Texture2D" uid="uid://cw3rkyv8fdahu" path="res://images/body/head.svg" id="3_u0pwc"]
 [ext_resource type="Texture2D" uid="uid://bbs3jldstffc0" path="res://images/body/neck.svg" id="3_vovfy"]
-[ext_resource type="Texture2D" uid="uid://bwrogv8x3ncs4" path="res://images/hair/hair_back.svg" id="4_cicko"]
-[ext_resource type="Texture2D" uid="uid://bobwsboon05wp" path="res://images/hair/hair_front.svg" id="5_bj47h"]
 [ext_resource type="Texture2D" uid="uid://db42i8mwy7fbp" path="res://images/face/eye_white.svg" id="6_4lh0q"]
 [ext_resource type="Texture2D" uid="uid://c4uofwiqrw70a" path="res://images/face/eye_iris.svg" id="7_7qyni"]
 [ext_resource type="Texture2D" uid="uid://bvn1d44onp87p" path="res://images/face/eye_pupil.svg" id="8_sougf"]
@@ -32,17 +30,6 @@ texture = ExtResource("3_vovfy")
 [node name="Head" type="Sprite2D" parent="Skeleton/Neck" unique_id=1548726401 groups=["skin"]]
 position = Vector2(0, -75)
 texture = ExtResource("3_u0pwc")
-
-[node name="Hair" type="Sprite2D" parent="Skeleton/Neck/Head" unique_id=1735400368 groups=["hair"]]
-self_modulate = Color(0.1, 0.1, 0.1, 1)
-z_index = -2
-texture = ExtResource("4_cicko")
-
-[node name="HairFront" type="Sprite2D" parent="Skeleton/Neck/Head" unique_id=1485161237 groups=["hair"]]
-self_modulate = Color(0.12225223, 0.12225223, 0.12225223, 1)
-position = Vector2(-6, -807)
-texture = ExtResource("5_bj47h")
-offset = Vector2(6, 807)
 
 [node name="EyeL" type="Sprite2D" parent="Skeleton/Neck/Head" unique_id=1416670311]
 position = Vector2(-211, -239)

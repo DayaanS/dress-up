@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dxrjlcibhqt8i" path="res://scenes/item_selection.tscn" id="3_cb7s4"]
 [ext_resource type="PackedScene" uid="uid://nc7j4mf7wqih" path="res://scenes/character.tscn" id="3_ds3pn"]
 [ext_resource type="PackedScene" uid="uid://b61a51s63pxhe" path="res://scenes/item_color_selection.tscn" id="4_cb7s4"]
+[ext_resource type="PackedScene" uid="uid://cwiw8cdbsjjcn" path="res://scenes/layers_ordering.tscn" id="5_pb2oy"]
 
 [node name="Customization" type="Node2D" unique_id=1565179698]
 script = ExtResource("1_k71u6")
@@ -13,10 +14,6 @@ z_index = -4
 offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0.8598237, 0.6421838, 0.66907465, 1)
-
-[node name="Character" parent="." unique_id=1928772576 instance=ExtResource("3_ds3pn")]
-position = Vector2(1392, 568)
-scale = Vector2(0.35, 0.35)
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=2042037321]
 
@@ -78,17 +75,30 @@ layout_mode = 2
 [node name="ItemSelection" parent="UI" unique_id=1754921532 node_paths=PackedStringArray("character", "root") instance=ExtResource("3_cb7s4")]
 offset_left = 168.0
 offset_top = 53.0
-offset_right = -96.0
-offset_bottom = 53.0
+offset_right = -1240.8862
+offset_bottom = -542.1069
 scale = Vector2(1.1112984, 1.2064514)
-character = NodePath("../../Character")
+character = NodePath("../../Layers/Character")
 root = NodePath("../..")
 
 [node name="ItemColorSelection" parent="UI" unique_id=1949384703 instance=ExtResource("4_cb7s4")]
 offset_left = 177.0
 offset_top = 699.0
-offset_right = 177.0
-offset_bottom = 699.0
+offset_right = -1191.0
+offset_bottom = -52.0
+
+[node name="LayersUI" parent="UI" unique_id=136292836 node_paths=PackedStringArray("layers_parent_node") instance=ExtResource("5_pb2oy")]
+offset_left = 768.0
+offset_top = 86.0
+offset_right = -979.0
+offset_bottom = -50.0
+layers_parent_node = NodePath("../../Layers")
+
+[node name="Layers" type="Node2D" parent="." unique_id=834148082]
+
+[node name="Character" parent="Layers" unique_id=1928772576 instance=ExtResource("3_ds3pn")]
+position = Vector2(1392, 568)
+scale = Vector2(0.35, 0.35)
 
 [connection signal="color_changed" from="UI/BodyColorVBoxContainer/SkinHBoxContainer/SkinColorPickerButton" to="." method="_on_skin_color_picker_button_color_changed"]
 [connection signal="color_changed" from="UI/BodyColorVBoxContainer/HBoxContainer2/HairColorPickerButton" to="." method="_on_hair_color_picker_button_color_changed"]

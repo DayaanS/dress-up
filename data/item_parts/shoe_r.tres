@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemPart" format=3 uid="uid://bxyfn6errswex"]
+
+[ext_resource type="Script" uid="uid://83kjmk21x147" path="res://data/item_part.gd" id="1_2e8k4"]
+[ext_resource type="Texture2D" uid="uid://5wl65wu2ewmq" path="res://images/clothing/shoes.svg" id="2_tcb3p"]
+
+[resource]
+script = ExtResource("1_2e8k4")
+sprite = ExtResource("2_tcb3p")
+parent_node_id = "CalfR"
+flip_h = true
+metadata/_custom_type_script = "uid://83kjmk21x147"
