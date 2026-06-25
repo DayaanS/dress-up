@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://nc7j4mf7wqih"]
 
-[ext_resource type="Script" uid="uid://dk1k63cgf7t8x" path="res://scripts/character.gd" id="1_50cep"]
+[ext_resource type="Script" uid="uid://dk1k63cgf7t8x" path="res://scripts/skeleton.gd" id="1_50cep"]
 [ext_resource type="Texture2D" uid="uid://cw3rkyv8fdahu" path="res://images/body/head.svg" id="3_u0pwc"]
 [ext_resource type="Texture2D" uid="uid://bbs3jldstffc0" path="res://images/body/neck.svg" id="3_vovfy"]
 [ext_resource type="Texture2D" uid="uid://db42i8mwy7fbp" path="res://images/face/eye_white.svg" id="6_4lh0q"]
@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://cj6drn32kj65s" path="res://images/body/calf.svg" id="17_3et6r"]
 [ext_resource type="Texture2D" uid="uid://cmipob4ju20q0" path="res://images/body/torso.svg" id="18_so3kc"]
 
-[node name="Character" type="Node2D" unique_id=1928772576]
+[node name="Body" type="Node2D" unique_id=1928772576]
 script = ExtResource("1_50cep")
 
 [node name="Skeleton" type="Node2D" parent="." unique_id=1079405953]

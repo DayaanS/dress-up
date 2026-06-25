@@ -1,13 +1,25 @@
 [gd_scene format=3 uid="uid://i4fb6cnrbnha"]
 
-[ext_resource type="Script" uid="uid://eufbgfu7y686" path="res://scripts/customization.gd" id="1_k71u6"]
 [ext_resource type="PackedScene" uid="uid://dxrjlcibhqt8i" path="res://scenes/item_selection.tscn" id="3_cb7s4"]
-[ext_resource type="PackedScene" uid="uid://nc7j4mf7wqih" path="res://scenes/character.tscn" id="3_ds3pn"]
+[ext_resource type="PackedScene" uid="uid://nc7j4mf7wqih" path="res://scenes/body.tscn" id="3_ds3pn"]
 [ext_resource type="PackedScene" uid="uid://b61a51s63pxhe" path="res://scenes/item_color_selection.tscn" id="4_cb7s4"]
 [ext_resource type="PackedScene" uid="uid://cwiw8cdbsjjcn" path="res://scenes/layers_ordering.tscn" id="5_pb2oy"]
 
+[sub_resource type="GDScript" id="GDScript_cb7s4"]
+script/source = "extends Node2D
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float) -> void:
+	pass
+"
+
 [node name="Customization" type="Node2D" unique_id=1565179698]
-script = ExtResource("1_k71u6")
+script = SubResource("GDScript_cb7s4")
 
 [node name="Bg" type="ColorRect" parent="." unique_id=123198597]
 z_index = -4
@@ -72,14 +84,13 @@ text = "Top"
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 
-[node name="ItemSelection" parent="UI" unique_id=1754921532 node_paths=PackedStringArray("character", "root") instance=ExtResource("3_cb7s4")]
+[node name="ItemSelection" parent="UI" unique_id=1754921532 node_paths=PackedStringArray("outfit") instance=ExtResource("3_cb7s4")]
 offset_left = 168.0
 offset_top = 53.0
 offset_right = -1240.8862
 offset_bottom = -542.1069
 scale = Vector2(1.1112984, 1.2064514)
-character = NodePath("../../Layers/Character")
-root = NodePath("../..")
+outfit = NodePath("../../Outfit")
 
 [node name="ItemColorSelection" parent="UI" unique_id=1949384703 instance=ExtResource("4_cb7s4")]
 offset_left = 177.0
@@ -87,18 +98,18 @@ offset_top = 699.0
 offset_right = -1191.0
 offset_bottom = -52.0
 
-[node name="LayersUI" parent="UI" unique_id=136292836 node_paths=PackedStringArray("layers_parent_node") instance=ExtResource("5_pb2oy")]
+[node name="Layers" parent="UI" unique_id=136292836 node_paths=PackedStringArray("layers_parent_node") instance=ExtResource("5_pb2oy")]
 offset_left = 768.0
 offset_top = 86.0
 offset_right = -979.0
 offset_bottom = -50.0
-layers_parent_node = NodePath("../../Layers")
+layers_parent_node = NodePath("../../Outfit")
 
-[node name="Layers" type="Node2D" parent="." unique_id=834148082]
-
-[node name="Character" parent="Layers" unique_id=1928772576 instance=ExtResource("3_ds3pn")]
-position = Vector2(1392, 568)
+[node name="Outfit" type="Node2D" parent="." unique_id=834148082]
+position = Vector2(1457, 572)
 scale = Vector2(0.35, 0.35)
+
+[node name="Body" parent="Outfit" unique_id=1928772576 instance=ExtResource("3_ds3pn")]
 
 [connection signal="color_changed" from="UI/BodyColorVBoxContainer/SkinHBoxContainer/SkinColorPickerButton" to="." method="_on_skin_color_picker_button_color_changed"]
 [connection signal="color_changed" from="UI/BodyColorVBoxContainer/HBoxContainer2/HairColorPickerButton" to="." method="_on_hair_color_picker_button_color_changed"]

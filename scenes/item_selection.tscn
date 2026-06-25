@@ -21,7 +21,7 @@ grow_horizontal = 2
 grow_vertical = 2
 current_tab = 0
 
-[node name="ItemList" type="ItemList" parent="TabContainer" unique_id=139898182]
+[node name="ClothesList" type="ItemList" parent="TabContainer" unique_id=139898182]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("2_47dkk")
@@ -53,6 +53,6 @@ same_column_width = true
 fixed_icon_size = Vector2i(100, 100)
 metadata/_tab_index = 2
 
-[connection signal="multi_selected" from="TabContainer/ItemList" to="." method="_on_item_list_multi_selected"]
+[connection signal="multi_selected" from="TabContainer/ClothesList" to="." method="_on_item_list_multi_selected"]
 [connection signal="multi_selected" from="TabContainer/HairFront" to="." method="_on_hair_front_multi_selected"]
 [connection signal="multi_selected" from="TabContainer/HairBack" to="." method="_on_hair_back_multi_selected"]

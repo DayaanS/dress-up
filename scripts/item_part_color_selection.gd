@@ -3,7 +3,7 @@ extends HBoxContainer
 @export var part_name:String
 @onready var color_picker_button: ColorPickerButton = $ColorPickerButton
 @onready var label: Label = $Label
-@export var layer: Character
+@export var layer: Skeleton
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://cdvgy38nflwke" path="res://data/ui_theme.tres" id="1_tbnyn"]
 [ext_resource type="Script" uid="uid://dv8sywmgooexr" path="res://scripts/layers_ordering.gd" id="2_6mf45"]
-[ext_resource type="Script" uid="uid://dk1k63cgf7t8x" path="res://scripts/character.gd" id="3_i3hbl"]
+[ext_resource type="Script" uid="uid://dk1k63cgf7t8x" path="res://scripts/skeleton.gd" id="3_i3hbl"]
 
 [node name="LayersUI" type="Control" unique_id=136292836]
 layout_mode = 3
@@ -25,6 +25,7 @@ grow_vertical = 2
 [node name="ItemList" type="ItemList" parent="VBoxContainer" unique_id=2001194673]
 layout_mode = 2
 size_flags_vertical = 3
+theme = ExtResource("1_tbnyn")
 select_mode = 1
 fixed_icon_size = Vector2i(100, 100)
 

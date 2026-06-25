@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bygkaghwhpgbu"]
 
-[ext_resource type="Script" uid="uid://dk1k63cgf7t8x" path="res://scripts/character.gd" id="1_pbvs3"]
+[ext_resource type="Script" uid="uid://dk1k63cgf7t8x" path="res://scripts/skeleton.gd" id="1_pbvs3"]
 
 [sub_resource type="AnimationRootNode" id="AnimationRootNode_pbvs3"]
 

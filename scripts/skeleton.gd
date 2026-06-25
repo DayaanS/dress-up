@@ -1,5 +1,5 @@
 extends Node2D
-class_name Character
+class_name Skeleton
 
 func add_item_part(item:Item, item_part_data:ItemPart):
 	var item_part = ItemPartNode.new()

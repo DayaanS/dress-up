@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Item" format=3 uid="uid://cs3drpibsp75u"]
 
-[ext_resource type="Texture2D" uid="uid://waanc2l27xmk" path="res://icon.svg" id="1_dnehm"]
+[ext_resource type="Texture2D" uid="uid://kmn5idwlocc0" path="res://images/clothing/pants_torso.svg" id="1_03dgl"]
 [ext_resource type="Script" uid="uid://83kjmk21x147" path="res://data/item_part.gd" id="1_pgafs"]
 [ext_resource type="Script" uid="uid://c18v5m8wr0nyo" path="res://data/item.gd" id="2_yjeuv"]
 [ext_resource type="Resource" uid="uid://bqmk87oltx8av" path="res://data/item_parts/pants_torso.tres" id="3_70uhc"]
@@ -13,7 +13,7 @@
 script = ExtResource("2_yjeuv")
 name = "Pants"
 category = "Bottoms"
-icon = ExtResource("1_dnehm")
+icon = ExtResource("1_03dgl")
 parts = Array[ExtResource("1_pgafs")]([ExtResource("3_70uhc"), ExtResource("4_03dgl"), ExtResource("5_72dvx"), ExtResource("6_03dgl"), ExtResource("7_72dvx")])
 colors = Array[Color]([Color(0.1268841, 0.26610073, 0.3700716, 1)])
 metadata/_custom_type_script = "uid://c18v5m8wr0nyo"
