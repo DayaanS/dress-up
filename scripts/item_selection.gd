@@ -3,12 +3,14 @@ extends Control
 @onready var clothes_list: ItemList = %ClothesList
 @onready var hair_front_list: ItemList = %HairFront
 @onready var hair_back_list: ItemList = %HairBack
+@onready var poses_list: ItemList = $TabContainer/PosesList
 
 @onready var layers_ui: Control = $"../Layers"
 
 @export var outfit: Node
 
 var skeleton_scene = preload("res://scenes/skeleton.tscn")
+var body_scene = preload("res://scenes/body.tscn")
 
 var all_clothes_data:Array[Item] = []
 var all_hair_front_data:Array[Item] = []
@@ -39,18 +41,22 @@ func add_item_to_body(all_items_data, index:int, selected: bool, category):
 		var skeleton:Skeleton = add_skeleton()
 		skeleton.add_item(all_items_data[index])
 		item_color_selection.add_item_colors(all_clothes_data[index])
-		current_item_nodes[index] = skeleton
-		layers_ui.add_layer_to_UI(category+ str(index), selected, all_items_data[index].icon)
+		current_item_nodes[index+1] = skeleton
+		layers_ui.add_layer_to_UI(all_items_data[index].item_id, selected, all_items_data[index].icon)
 
 	else:
-		current_item_nodes[index].queue_free()
+		current_item_nodes[index+1].queue_free()
 		item_color_selection.remove_item_colors()
-		layers_ui.remove_layer_from_UI(category + str(index))
+		layers_ui.remove_layer_from_UI(all_items_data[index].item_id)
 
 
 # Called when the node enters the scene tree for the first time.
 # Gets data with get_items(path) function and populates ItemList nodes with items
 func _ready() -> void:
+	var body:Skeleton = body_scene.instantiate()
+	outfit.add_child(body)
+	current_item_nodes[0] = body
+		
 	all_clothes_data = get_items("res://data/items/")
 	all_hair_back_data = get_items("res://data/hair_back/")
 	all_hair_front_data = get_items("res://data/hair_front/")
@@ -63,6 +69,7 @@ func _ready() -> void:
 	print(current_item_nodes)
 	
 
+
 func _on_item_list_multi_selected(index: int, selected: bool) -> void:
 	add_item_to_body(all_clothes_data, index, selected, "clothes")
 
@@ -70,4 +77,14 @@ func _on_hair_front_multi_selected(index: int, selected: bool) -> void:
 	add_item_to_body(all_hair_front_data,index,selected, "hair_front")
 	
 func _on_hair_back_multi_selected(index: int, selected: bool) -> void:
-	add_item_to_body(all_hair_back_data, index, selected, "hair_back")
+	add_item_to_body(all_hair_back_data, index, selected, "ha")
+
+
+func _on_arm_l_poses_item_selected(index: int) -> void:
+	for key in current_item_nodes:
+		current_item_nodes[key].set_pose("arm", index)
+
+
+func _on_leg_l_poses_item_selected(index: int) -> void:
+	for key in current_item_nodes:
+		current_item_nodes[key].set_pose("leg", index)

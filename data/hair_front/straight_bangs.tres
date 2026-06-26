@@ -13,6 +13,7 @@ metadata/_custom_type_script = "uid://83kjmk21x147"
 
 [resource]
 script = ExtResource("4_ffvcb")
+item_id = "hair_front_1"
 icon = ExtResource("3_wm0fr")
 parts = Array[ExtResource("2_dp2u0")]([SubResource("Resource_bj408")])
 colors = Array[Color]([Color(0, 0, 0, 1)])

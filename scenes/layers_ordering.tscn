@@ -26,7 +26,6 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("1_tbnyn")
-select_mode = 1
 fixed_icon_size = Vector2i(100, 100)
 
 [node name="ToTop" type="Button" parent="VBoxContainer" unique_id=587294994]
@@ -67,7 +66,7 @@ metadata/_custom_type_script = "uid://dk1k63cgf7t8x"
 script = ExtResource("3_i3hbl")
 metadata/_custom_type_script = "uid://dk1k63cgf7t8x"
 
-[connection signal="multi_selected" from="VBoxContainer/ItemList" to="." method="_on_item_list_multi_selected"]
+[connection signal="item_selected" from="VBoxContainer/ItemList" to="." method="_on_item_list_item_selected"]
 [connection signal="pressed" from="VBoxContainer/ToTop" to="." method="_on_to_top_pressed"]
 [connection signal="pressed" from="VBoxContainer/Up" to="." method="_on_up_pressed"]
 [connection signal="pressed" from="VBoxContainer/Down" to="." method="_on_down_pressed"]

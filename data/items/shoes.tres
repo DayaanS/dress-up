@@ -8,6 +8,7 @@
 
 [resource]
 script = ExtResource("2_gm3sb")
+item_id = "feet_0"
 name = "Shoes"
 category = "Feet"
 icon = ExtResource("1_xi7jj")

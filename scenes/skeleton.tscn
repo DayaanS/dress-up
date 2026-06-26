@@ -4,73 +4,273 @@
 
 [sub_resource type="AnimationRootNode" id="AnimationRootNode_pbvs3"]
 
+[sub_resource type="Animation" id="Animation_epf45"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Skeleton/ArmL/ForearmL/HandL:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Skeleton/ArmL/ForearmL:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Skeleton/ArmL/ForearmL/HandL:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_at8vq"]
+resource_name = "hello_hand"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Skeleton/ArmL/ForearmL/HandL:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.4984994]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Skeleton/ArmL/ForearmL:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.8387531]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Skeleton/ArmL/ForearmL/HandL:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.25),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_pbvs3"]
+resource_name = "princess_hand"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Skeleton/ArmL/ForearmL/HandL:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.6241259]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_txkty"]
+_data = {
+&"RESET": SubResource("Animation_epf45"),
+&"hello_hand": SubResource("Animation_at8vq"),
+&"princess_hand": SubResource("Animation_pbvs3")
+}
+
+[sub_resource type="Animation" id="Animation_ivqcw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%ThighL:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("%CalfL:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_bnirc"]
+resource_name = "leg_up"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%ThighL:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.14226943]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("%CalfL:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.30221242]
+}
+
+[sub_resource type="Animation" id="Animation_5pgwy"]
+resource_name = "leg_wide"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%ThighL:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.18232231]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("%CalfL:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.10105978]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ivqcw"]
+_data = {
+&"RESET": SubResource("Animation_ivqcw"),
+&"leg_up": SubResource("Animation_bnirc"),
+&"leg_wide": SubResource("Animation_5pgwy")
+}
+
 [node name="Skeleton" type="Node2D" unique_id=1248511463]
 script = ExtResource("1_pbvs3")
 
-[node name="Neck" type="Sprite2D" parent="." unique_id=335162378]
+[node name="Skeleton" type="Node2D" parent="." unique_id=1487852195]
+
+[node name="Neck" type="Sprite2D" parent="Skeleton" unique_id=335162378]
 unique_name_in_owner = true
 position = Vector2(0, -265)
 
-[node name="Head" type="Sprite2D" parent="Neck" unique_id=973461026]
+[node name="Head" type="Sprite2D" parent="Skeleton/Neck" unique_id=973461026]
 unique_name_in_owner = true
 position = Vector2(0, -75)
 
-[node name="ArmL" type="Sprite2D" parent="." unique_id=517647472]
+[node name="ArmL" type="Sprite2D" parent="Skeleton" unique_id=517647472]
 unique_name_in_owner = true
 position = Vector2(-130, -243)
 metadata/armPosX = -128
 metadata/armPosY = -267
 
-[node name="ForearmL" type="Sprite2D" parent="ArmL" unique_id=804297591]
+[node name="ForearmL" type="Sprite2D" parent="Skeleton/ArmL" unique_id=804297591]
 unique_name_in_owner = true
 position = Vector2(-184, 245)
 
-[node name="HandL" type="Sprite2D" parent="ArmL/ForearmL" unique_id=698670171]
+[node name="HandL" type="Sprite2D" parent="Skeleton/ArmL/ForearmL" unique_id=698670171]
 unique_name_in_owner = true
 position = Vector2(-121, 160)
 
-[node name="ArmR" type="Sprite2D" parent="." unique_id=680181431]
+[node name="ArmR" type="Sprite2D" parent="Skeleton" unique_id=680181431]
 unique_name_in_owner = true
 position = Vector2(130, -243)
 flip_h = true
 metadata/armPosX = -128
 metadata/armPosY = -267
 
-[node name="ForearmR" type="Sprite2D" parent="ArmR" unique_id=241466204]
+[node name="ForearmR" type="Sprite2D" parent="Skeleton/ArmR" unique_id=241466204]
 unique_name_in_owner = true
 position = Vector2(184, 245)
 flip_h = true
 
-[node name="HandR" type="Sprite2D" parent="ArmR/ForearmR" unique_id=1540263485]
+[node name="HandR" type="Sprite2D" parent="Skeleton/ArmR/ForearmR" unique_id=1540263485]
 unique_name_in_owner = true
 position = Vector2(121, 160)
 flip_h = true
 
-[node name="ThighL" type="Sprite2D" parent="." unique_id=1192881206]
+[node name="ThighL" type="Sprite2D" parent="Skeleton" unique_id=1192881206]
 unique_name_in_owner = true
 position = Vector2(-115, 227)
+rotation = -0.14226943
 
-[node name="CalfL" type="Sprite2D" parent="ThighL" unique_id=1349639707]
+[node name="CalfL" type="Sprite2D" parent="Skeleton/ThighL" unique_id=1349639707]
 unique_name_in_owner = true
 position = Vector2(-41, 338)
+rotation = 0.30221242
 
-[node name="ThighR" type="Sprite2D" parent="." unique_id=1797366373]
+[node name="ThighR" type="Sprite2D" parent="Skeleton" unique_id=1797366373]
 unique_name_in_owner = true
 position = Vector2(115, 227)
 flip_h = true
 
-[node name="CalfR" type="Sprite2D" parent="ThighR" unique_id=785145427]
+[node name="CalfR" type="Sprite2D" parent="Skeleton/ThighR" unique_id=785145427]
 unique_name_in_owner = true
 position = Vector2(41, 338)
 flip_h = true
 
-[node name="Torso" type="Sprite2D" parent="." unique_id=420369955]
+[node name="Torso" type="Sprite2D" parent="Skeleton" unique_id=420369955]
 unique_name_in_owner = true
 self_modulate = Color(0.5489626, 0.5489626, 0.54896253, 1)
 
-[node name="AnimationTree" type="AnimationTree" parent="." unique_id=1132662506]
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=419597982]
 root_node = NodePath(".")
 tree_root = SubResource("AnimationRootNode_pbvs3")
-anim_player = NodePath("AnimationPlayer")
+anim_player = NodePath("ArmAnimations")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimationTree" unique_id=390802051]
+[node name="ArmAnimations" type="AnimationPlayer" parent="AnimationTree" unique_id=1654621360]
+libraries/ = SubResource("AnimationLibrary_txkty")
+
+[node name="LegAnimations" type="AnimationPlayer" parent="AnimationTree" unique_id=1977064872]
+libraries/ = SubResource("AnimationLibrary_ivqcw")

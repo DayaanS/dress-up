@@ -6,22 +6,22 @@ var selected_layers_indexes = []
 
 var all_layers:Array[Node]
 var current_layer_count: int = 0
+@onready var item_color_selection: Control = $"../ItemColorSelection"
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	all_layers = layers_parent_node.get_children()
 	for i in range(len(all_layers)-1, -1, -1):
 		item_list.add_item("body")
 		item_list.move_item(item_list.item_count-1, 0)
-		
+
 
 func add_layer_to_UI(item_id, selected, icon):
-	#all_layers = layers_parent_node.get_children()
-	#for i in range(len(all_layers)-1, -1, -1):
-		#item_list.add_item(str(i))
-		
 	item_list.add_item(item_id, icon)
 	item_list.move_item(item_list.item_count-1, 0)
 	current_layer_count += 1
+	
 
 func remove_layer_from_UI(item_id):
 	for i in range(item_list.item_count):
@@ -29,20 +29,6 @@ func remove_layer_from_UI(item_id):
 		if item_id == layer_text:
 			item_list.remove_item(i)
 			current_layer_count -= 1
-	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-
-func _on_item_list_multi_selected(index: int, selected: bool) -> void:
-	pass
-	#if selected == true:
-		#selected_layers_indexes.append(index)
-		#print(selected_layers_indexes)
-	#else: 
-		#selected_layers_indexes.erase(index)
-		#print(selected_layers_indexes)
 
 
 func _on_up_pressed() -> void:
@@ -67,9 +53,8 @@ func _on_to_top_pressed() -> void:
 	all_layers = layers_parent_node.get_children()
 	for layer_index in selected_layers_indexes:
 		item_list.move_item(layer_index, 0)
-		var layer_node = all_layers[3-layer_index]
+		var layer_node = all_layers[current_layer_count-layer_index]
 		layers_parent_node.move_child(layer_node, len(all_layers))
-
 
 
 func _on_to_bottom_pressed() -> void:
@@ -78,5 +63,14 @@ func _on_to_bottom_pressed() -> void:
 	all_layers = layers_parent_node.get_children()
 	for layer_index in selected_layers_indexes:
 		item_list.move_item(layer_index, item_list_size-1)
-		var layer_node = all_layers[3-layer_index]
+		var layer_node = all_layers[current_layer_count-layer_index]
 		layers_parent_node.move_child(layer_node, 0)
+
+#
+#func _on_item_list_item_selected(index: int) -> void:
+	#var all_colors = item_color_selection.color_list.get_children()
+	#all_colors[index].show()
+	#for color in all_colors:
+		#if color != all_colors[index]:
+			#color.hide()
+	

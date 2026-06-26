@@ -1,0 +1,110 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://dwv0popho7k2p"]
+
+[ext_resource type="Texture2D" uid="uid://73dtqqe51t2" path="res://images/reference.svg" id="1_c5o5k"]
+[ext_resource type="Script" uid="uid://83kjmk21x147" path="res://data/item_part.gd" id="1_gac3q"]
+[ext_resource type="Script" uid="uid://c18v5m8wr0nyo" path="res://data/item.gd" id="2_c5o5k"]
+[ext_resource type="Texture2D" uid="uid://cw3rkyv8fdahu" path="res://images/body/head.svg" id="3_1j3mt"]
+[ext_resource type="Texture2D" uid="uid://cmipob4ju20q0" path="res://images/body/torso.svg" id="4_b02bl"]
+[ext_resource type="Texture2D" uid="uid://bbs3jldstffc0" path="res://images/body/neck.svg" id="5_ay8hr"]
+[ext_resource type="Texture2D" uid="uid://bgqv1st36fxtx" path="res://images/body/arm.svg" id="6_t4brg"]
+[ext_resource type="Texture2D" uid="uid://cglpquc80sioj" path="res://images/body/forearm.svg" id="7_jqn61"]
+[ext_resource type="Texture2D" uid="uid://b7i660il6bjdp" path="res://images/body/hand.svg" id="8_ye4ty"]
+[ext_resource type="Texture2D" uid="uid://3gka245onxf" path="res://images/body/thigh.svg" id="9_dal0h"]
+[ext_resource type="Texture2D" uid="uid://cj6drn32kj65s" path="res://images/body/calf.svg" id="10_lc7xh"]
+
+[sub_resource type="Resource" id="Resource_nkuvm"]
+script = ExtResource("1_gac3q")
+name = "Head"
+sprite = ExtResource("3_1j3mt")
+parent_node_id = "Head"
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_w5y6p"]
+script = ExtResource("1_gac3q")
+name = "Torso"
+sprite = ExtResource("4_b02bl")
+parent_node_id = "Torso"
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_n22ay"]
+script = ExtResource("1_gac3q")
+name = "Neck"
+sprite = ExtResource("5_ay8hr")
+parent_node_id = "Neck"
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_7jk04"]
+script = ExtResource("1_gac3q")
+name = "ArmR"
+sprite = ExtResource("6_t4brg")
+parent_node_id = "ArmR"
+flip_h = true
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_hjije"]
+script = ExtResource("1_gac3q")
+name = "ArmL"
+sprite = ExtResource("6_t4brg")
+parent_node_id = "ArmL"
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_ukkpc"]
+script = ExtResource("1_gac3q")
+sprite = ExtResource("7_jqn61")
+parent_node_id = "ForearmL"
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_srw6a"]
+script = ExtResource("1_gac3q")
+sprite = ExtResource("7_jqn61")
+parent_node_id = "ForearmR"
+flip_h = true
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_u5c5i"]
+script = ExtResource("1_gac3q")
+sprite = ExtResource("8_ye4ty")
+parent_node_id = "HandL"
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_gxy7k"]
+script = ExtResource("1_gac3q")
+sprite = ExtResource("8_ye4ty")
+parent_node_id = "HandR"
+flip_h = true
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_nbhyi"]
+script = ExtResource("1_gac3q")
+sprite = ExtResource("9_dal0h")
+parent_node_id = "ThighL"
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_r03km"]
+script = ExtResource("1_gac3q")
+sprite = ExtResource("9_dal0h")
+parent_node_id = "ThighR"
+flip_h = true
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_076iy"]
+script = ExtResource("1_gac3q")
+sprite = ExtResource("10_lc7xh")
+parent_node_id = "CalfL"
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_rkngo"]
+script = ExtResource("1_gac3q")
+sprite = ExtResource("10_lc7xh")
+parent_node_id = "CalfR"
+flip_h = true
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[resource]
+script = ExtResource("2_c5o5k")
+item_id = "Body"
+name = "Body"
+icon = ExtResource("1_c5o5k")
+parts = Array[ExtResource("1_gac3q")]([SubResource("Resource_nkuvm"), SubResource("Resource_w5y6p"), SubResource("Resource_n22ay"), SubResource("Resource_7jk04"), SubResource("Resource_hjije"), SubResource("Resource_ukkpc"), SubResource("Resource_srw6a"), SubResource("Resource_u5c5i"), SubResource("Resource_gxy7k"), SubResource("Resource_nbhyi"), SubResource("Resource_r03km"), SubResource("Resource_076iy"), SubResource("Resource_rkngo")])
+colors = Array[Color]([Color(1, 1, 1, 1)])
+metadata/_custom_type_script = "uid://c18v5m8wr0nyo"

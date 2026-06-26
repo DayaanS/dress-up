@@ -13,6 +13,7 @@ metadata/_custom_type_script = "uid://83kjmk21x147"
 
 [resource]
 script = ExtResource("2_ge5gy")
+item_id = "hair_front_0"
 name = "Smooth"
 icon = ExtResource("3_3cttw")
 parts = Array[ExtResource("1_opwfk")]([SubResource("Resource_0fyma")])

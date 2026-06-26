@@ -13,6 +13,7 @@
 
 [resource]
 script = ExtResource("2_yu0ss")
+item_id = "coat_0"
 name = "V Neck Sweater"
 category = "Tops"
 icon = ExtResource("1_e1mn7")

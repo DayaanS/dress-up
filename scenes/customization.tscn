@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://i4fb6cnrbnha"]
 
 [ext_resource type="PackedScene" uid="uid://dxrjlcibhqt8i" path="res://scenes/item_selection.tscn" id="3_cb7s4"]
-[ext_resource type="PackedScene" uid="uid://nc7j4mf7wqih" path="res://scenes/body.tscn" id="3_ds3pn"]
 [ext_resource type="PackedScene" uid="uid://b61a51s63pxhe" path="res://scenes/item_color_selection.tscn" id="4_cb7s4"]
 [ext_resource type="PackedScene" uid="uid://cwiw8cdbsjjcn" path="res://scenes/layers_ordering.tscn" id="5_pb2oy"]
 
@@ -108,8 +107,6 @@ layers_parent_node = NodePath("../../Outfit")
 [node name="Outfit" type="Node2D" parent="." unique_id=834148082]
 position = Vector2(1457, 572)
 scale = Vector2(0.35, 0.35)
-
-[node name="Body" parent="Outfit" unique_id=1928772576 instance=ExtResource("3_ds3pn")]
 
 [connection signal="color_changed" from="UI/BodyColorVBoxContainer/SkinHBoxContainer/SkinColorPickerButton" to="." method="_on_skin_color_picker_button_color_changed"]
 [connection signal="color_changed" from="UI/BodyColorVBoxContainer/HBoxContainer2/HairColorPickerButton" to="." method="_on_hair_color_picker_button_color_changed"]

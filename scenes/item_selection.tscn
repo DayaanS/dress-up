@@ -19,17 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-current_tab = 0
-
-[node name="ClothesList" type="ItemList" parent="TabContainer" unique_id=139898182]
-unique_name_in_owner = true
-layout_mode = 2
-theme = ExtResource("2_47dkk")
-select_mode = 2
-max_columns = 2
-same_column_width = true
-fixed_icon_size = Vector2i(100, 100)
-metadata/_tab_index = 0
+current_tab = 3
 
 [node name="HairFront" type="ItemList" parent="TabContainer" unique_id=1551341964]
 unique_name_in_owner = true
@@ -40,7 +30,7 @@ select_mode = 2
 max_columns = 2
 same_column_width = true
 fixed_icon_size = Vector2i(100, 100)
-metadata/_tab_index = 1
+metadata/_tab_index = 0
 
 [node name="HairBack" type="ItemList" parent="TabContainer" unique_id=312190218]
 unique_name_in_owner = true
@@ -51,8 +41,43 @@ select_mode = 2
 max_columns = 2
 same_column_width = true
 fixed_icon_size = Vector2i(100, 100)
+metadata/_tab_index = 1
+
+[node name="ClothesList" type="ItemList" parent="TabContainer" unique_id=139898182]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme = ExtResource("2_47dkk")
+select_mode = 2
+max_columns = 2
+same_column_width = true
+fixed_icon_size = Vector2i(100, 100)
 metadata/_tab_index = 2
 
-[connection signal="multi_selected" from="TabContainer/ClothesList" to="." method="_on_item_list_multi_selected"]
+[node name="Poses" type="TabContainer" parent="TabContainer" unique_id=111635627]
+layout_mode = 2
+current_tab = 1
+metadata/_tab_index = 3
+
+[node name="ArmLPoses" type="ItemList" parent="TabContainer/Poses" unique_id=1924849498]
+visible = false
+layout_mode = 2
+item_count = 3
+item_0/text = "Reset"
+item_1/text = "Arm hello"
+item_2/text = "Arm princess"
+metadata/_tab_index = 0
+
+[node name="LegLPoses" type="ItemList" parent="TabContainer/Poses" unique_id=1327524725]
+layout_mode = 2
+item_count = 3
+item_0/text = "Reset"
+item_1/text = "Leg Up"
+item_2/text = "Leg Wide"
+metadata/_tab_index = 1
+
 [connection signal="multi_selected" from="TabContainer/HairFront" to="." method="_on_hair_front_multi_selected"]
 [connection signal="multi_selected" from="TabContainer/HairBack" to="." method="_on_hair_back_multi_selected"]
+[connection signal="multi_selected" from="TabContainer/ClothesList" to="." method="_on_item_list_multi_selected"]
+[connection signal="item_selected" from="TabContainer/Poses/ArmLPoses" to="." method="_on_arm_l_poses_item_selected"]
+[connection signal="item_selected" from="TabContainer/Poses/LegLPoses" to="." method="_on_leg_l_poses_item_selected"]
