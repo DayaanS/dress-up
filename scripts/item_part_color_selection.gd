@@ -9,6 +9,7 @@ extends HBoxContainer
 
 @export var item_selection: Node
 
+
 var color_picker_index = 0
 
 # Called when the node enters the scene tree for the first time.
@@ -25,5 +26,4 @@ func change_item_color(item:Item, index:int, color:Color):
 	
 func _on_color_picker_button_color_changed(color: Color) -> void:
 	change_item_color(Global.selected_item, color_picker_index, color)
-	
-	
+	Global.emit_signal("update_color")

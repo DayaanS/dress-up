@@ -33,6 +33,13 @@ func add_item_to_body(all_items_data, index:int, selected: bool):
 		
 		layers_ui.remove_layer_from_UI(all_items_data[index].item_id)
 
+func update_item():
+	var selected_item_array = Global.get_array_of_item(Global.selected_item)
+	var index = selected_item_array.find(Global.selected_item)
+	
+	add_item_to_body(selected_item_array, index, false)
+	add_item_to_body(selected_item_array, index, true)
+
 
 
 # Called when the node enters the scene tree for the first time.
@@ -49,6 +56,7 @@ func _ready() -> void:
 		hair_back_list.add_item(item.name, item.icon, true)
 	for item in Global.all_hair_front_data:
 		hair_front_list.add_item(item.name, item.icon, true)
+	Global.connect("update_color", Callable (self, "update_item"))
 
 
 func _on_item_list_multi_selected(index: int, selected: bool) -> void:
@@ -56,7 +64,7 @@ func _on_item_list_multi_selected(index: int, selected: bool) -> void:
 
 
 func _on_hair_front_multi_selected(index: int, selected: bool) -> void:
-	add_item_to_body(Global.all_hair_front_data,index, selected)
+	add_item_to_body(Global.all_hair_front_data, index, selected)
 
 
 func _on_hair_back_multi_selected(index: int, selected: bool) -> void:
