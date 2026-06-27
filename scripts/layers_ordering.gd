@@ -2,16 +2,17 @@ extends Control
 
 var selected_layers_indexes = []
 @onready var item_list: ItemList = $VBoxContainer/ItemList
-@export var layers_parent_node: Node2D
+@export var items_parent_node: Node2D
+@export var item_color_selection: Control
 
 var all_layers:Array[Node]
 var current_layer_count: int = 0
-@onready var item_color_selection: Control = $"../ItemColorSelection"
 
 
 # Called when the node enters the scene tree for the first time.
+# for now just adds body layer that is in outfit by default
 func _ready() -> void:
-	all_layers = layers_parent_node.get_children()
+	all_layers = items_parent_node.get_children()
 	for i in range(len(all_layers)-1, -1, -1):
 		item_list.add_item("body")
 		item_list.move_item(item_list.item_count-1, 0)
@@ -33,44 +34,45 @@ func remove_layer_from_UI(item_id):
 
 func _on_up_pressed() -> void:
 	selected_layers_indexes = item_list.get_selected_items()
-	all_layers = layers_parent_node.get_children()
+	all_layers = items_parent_node.get_children()
 	for layer_index in selected_layers_indexes:
 		item_list.move_item(layer_index, layer_index - 1)
 		var layer_node = all_layers[current_layer_count - layer_index]
-		layers_parent_node.move_child(layer_node, layer_node.get_index() + 1)
+		items_parent_node.move_child(layer_node, layer_node.get_index() + 1)
 
 func _on_down_pressed() -> void:
 	selected_layers_indexes = item_list.get_selected_items()
-	all_layers = layers_parent_node.get_children()
+	all_layers = items_parent_node.get_children()
 	for layer_index in selected_layers_indexes:
 		item_list.move_item(layer_index, layer_index + 1)
 		var layer_node = all_layers[current_layer_count - layer_index]
-		layers_parent_node.move_child(layer_node, layer_node.get_index() - 1)
+		items_parent_node.move_child(layer_node, layer_node.get_index() - 1)
 
 
 func _on_to_top_pressed() -> void:
 	selected_layers_indexes = item_list.get_selected_items()
-	all_layers = layers_parent_node.get_children()
+	all_layers = items_parent_node.get_children()
 	for layer_index in selected_layers_indexes:
 		item_list.move_item(layer_index, 0)
 		var layer_node = all_layers[current_layer_count-layer_index]
-		layers_parent_node.move_child(layer_node, len(all_layers))
+		items_parent_node.move_child(layer_node, len(all_layers))
 
 
 func _on_to_bottom_pressed() -> void:
 	var item_list_size = item_list.item_count
 	selected_layers_indexes = item_list.get_selected_items()
-	all_layers = layers_parent_node.get_children()
+	all_layers = items_parent_node.get_children()
 	for layer_index in selected_layers_indexes:
 		item_list.move_item(layer_index, item_list_size-1)
 		var layer_node = all_layers[current_layer_count-layer_index]
-		layers_parent_node.move_child(layer_node, 0)
+		items_parent_node.move_child(layer_node, 0)
 
-#
-#func _on_item_list_item_selected(index: int) -> void:
-	#var all_colors = item_color_selection.color_list.get_children()
-	#all_colors[index].show()
-	#for color in all_colors:
-		#if color != all_colors[index]:
-			#color.hide()
+
+func _on_item_list_item_selected(index: int) -> void:
+	var item_id = item_list.get_item_text(index)
+	print(item_id)
+	for item in Global.all_items_data:
+		if item_id == item.item_id:
+			print(item.item_id)
+			item_color_selection.add_item_colors(item)
 	

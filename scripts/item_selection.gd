@@ -12,22 +12,10 @@ extends Control
 var skeleton_scene = preload("res://scenes/skeleton.tscn")
 var body_scene = preload("res://scenes/body.tscn")
 
-var all_clothes_data:Array[Item] = []
-var all_hair_front_data:Array[Item] = []
-var all_hair_back_data:Array[Item] = []
-
 var current_item_nodes:Dictionary = {}
 
 @onready var item_color_selection: Control = $"../ItemColorSelection"
 
-# gets Item files from path and returns the array of Items
-func get_items(path):
-	var items_array:Array[Item] = []
-	for file in DirAccess.get_files_at(path):
-		var resource_file = path + file
-		var item:Item = load(resource_file) as Item
-		items_array.append(item)
-	return items_array
 
 # adds a skeleton base for item_parts to attach to and returns that node
 func add_skeleton():
@@ -36,17 +24,17 @@ func add_skeleton():
 	return instance
 
 
-func add_item_to_body(all_items_data, index:int, selected: bool, category):
+func add_item_to_body(all_items_data, index:int, selected: bool):
 	if selected == true:
 		var skeleton:Skeleton = add_skeleton()
 		skeleton.add_item(all_items_data[index])
-		item_color_selection.add_item_colors(all_clothes_data[index])
+		#item_color_selection.add_item_colors(all_clothes_data[index])
 		current_item_nodes[index+1] = skeleton
 		layers_ui.add_layer_to_UI(all_items_data[index].item_id, selected, all_items_data[index].icon)
 
 	else:
 		current_item_nodes[index+1].queue_free()
-		item_color_selection.remove_item_colors()
+		#item_color_selection.remove_item_colors()
 		layers_ui.remove_layer_from_UI(all_items_data[index].item_id)
 
 
@@ -56,28 +44,25 @@ func _ready() -> void:
 	var body:Skeleton = body_scene.instantiate()
 	outfit.add_child(body)
 	current_item_nodes[0] = body
-		
-	all_clothes_data = get_items("res://data/items/")
-	all_hair_back_data = get_items("res://data/hair_back/")
-	all_hair_front_data = get_items("res://data/hair_front/")
-	for item in all_clothes_data:
+
+	for item in Global.all_clothes_data:
 		clothes_list.add_item(item.name, item.icon, true)
-	for item in all_hair_back_data:
+	for item in Global.all_hair_back_data:
 		hair_back_list.add_item(item.name, item.icon, true)
-	for item in all_hair_front_data:
+	for item in Global.all_hair_front_data:
 		hair_front_list.add_item(item.name, item.icon, true)
-	print(current_item_nodes)
-	
 
 
 func _on_item_list_multi_selected(index: int, selected: bool) -> void:
-	add_item_to_body(all_clothes_data, index, selected, "clothes")
+	add_item_to_body(Global.all_clothes_data, index, selected)
+
 
 func _on_hair_front_multi_selected(index: int, selected: bool) -> void:
-	add_item_to_body(all_hair_front_data,index,selected, "hair_front")
-	
+	add_item_to_body(Global.all_hair_front_data,index,selected)
+
+
 func _on_hair_back_multi_selected(index: int, selected: bool) -> void:
-	add_item_to_body(all_hair_back_data, index, selected, "ha")
+	add_item_to_body(Global.all_hair_back_data, index, selected)
 
 
 func _on_arm_l_poses_item_selected(index: int) -> void:

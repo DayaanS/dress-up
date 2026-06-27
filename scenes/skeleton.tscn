@@ -99,7 +99,7 @@ tracks/0/keys = {
 "values": [0.0, 0.6241259]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_txkty"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pbvs3"]
 _data = {
 &"RESET": SubResource("Animation_epf45"),
 &"hello_hand": SubResource("Animation_at8vq"),
@@ -189,7 +189,7 @@ tracks/1/keys = {
 "values": [0.0, 0.10105978]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ivqcw"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_txkty"]
 _data = {
 &"RESET": SubResource("Animation_ivqcw"),
 &"leg_up": SubResource("Animation_bnirc"),
@@ -208,6 +208,49 @@ position = Vector2(0, -265)
 [node name="Head" type="Sprite2D" parent="Skeleton/Neck" unique_id=973461026]
 unique_name_in_owner = true
 position = Vector2(0, -75)
+
+[node name="EyeL" type="Sprite2D" parent="Skeleton/Neck/Head" unique_id=1098953377]
+position = Vector2(-211, -239)
+
+[node name="EyeWhiteL" type="Sprite2D" parent="Skeleton/Neck/Head/EyeL" unique_id=383399739]
+clip_children = 2
+
+[node name="EyeIrisL" type="Sprite2D" parent="Skeleton/Neck/Head/EyeL/EyeWhiteL" unique_id=1796046587]
+self_modulate = Color(0.12225223, 0.12225223, 0.12225223, 1)
+position = Vector2(19, -6)
+
+[node name="EyelashL" type="Sprite2D" parent="Skeleton/Neck/Head/EyeL" unique_id=980336628]
+self_modulate = Color(0, 0, 0, 1)
+
+[node name="EyeR" type="Sprite2D" parent="Skeleton/Neck/Head" unique_id=2062967183]
+position = Vector2(211, -239)
+flip_h = true
+
+[node name="EyeWhiteR" type="Sprite2D" parent="Skeleton/Neck/Head/EyeR" unique_id=1739050582]
+clip_children = 2
+flip_h = true
+
+[node name="EyeIrisR" type="Sprite2D" parent="Skeleton/Neck/Head/EyeR/EyeWhiteR" unique_id=936106989]
+self_modulate = Color(0.12225223, 0.12225223, 0.12225223, 1)
+position = Vector2(-19, -6)
+flip_h = true
+
+[node name="EyelashR" type="Sprite2D" parent="Skeleton/Neck/Head/EyeR" unique_id=2004297756]
+self_modulate = Color(0, 0, 0, 1)
+flip_h = true
+
+[node name="Mouth" type="Sprite2D" parent="Skeleton/Neck/Head" unique_id=1949470757]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(0, -97)
+
+[node name="BrowL" type="Sprite2D" parent="Skeleton/Neck/Head" unique_id=1039219011]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(-153, -495)
+
+[node name="BrowR" type="Sprite2D" parent="Skeleton/Neck/Head" unique_id=643197750]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(153, -495)
+flip_h = true
 
 [node name="ArmL" type="Sprite2D" parent="Skeleton" unique_id=517647472]
 unique_name_in_owner = true
@@ -243,12 +286,10 @@ flip_h = true
 [node name="ThighL" type="Sprite2D" parent="Skeleton" unique_id=1192881206]
 unique_name_in_owner = true
 position = Vector2(-115, 227)
-rotation = -0.14226943
 
 [node name="CalfL" type="Sprite2D" parent="Skeleton/ThighL" unique_id=1349639707]
 unique_name_in_owner = true
 position = Vector2(-41, 338)
-rotation = 0.30221242
 
 [node name="ThighR" type="Sprite2D" parent="Skeleton" unique_id=1797366373]
 unique_name_in_owner = true
@@ -265,12 +306,10 @@ unique_name_in_owner = true
 self_modulate = Color(0.5489626, 0.5489626, 0.54896253, 1)
 
 [node name="AnimationTree" type="AnimationTree" parent="." unique_id=419597982]
-root_node = NodePath(".")
 tree_root = SubResource("AnimationRootNode_pbvs3")
-anim_player = NodePath("ArmAnimations")
 
-[node name="ArmAnimations" type="AnimationPlayer" parent="AnimationTree" unique_id=1654621360]
+[node name="ArmAnimations" type="AnimationPlayer" parent="AnimationTree" unique_id=1956823863]
+libraries/ = SubResource("AnimationLibrary_pbvs3")
+
+[node name="LegAnimations" type="AnimationPlayer" parent="AnimationTree" unique_id=1188759908]
 libraries/ = SubResource("AnimationLibrary_txkty")
-
-[node name="LegAnimations" type="AnimationPlayer" parent="AnimationTree" unique_id=1977064872]
-libraries/ = SubResource("AnimationLibrary_ivqcw")

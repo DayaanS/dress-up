@@ -228,58 +228,51 @@ texture = ExtResource("3_u0pwc")
 [node name="EyeL" type="Sprite2D" parent="Skeleton/Neck/Head" unique_id=1416670311]
 position = Vector2(-211, -239)
 
-[node name="EyeWhite" type="Sprite2D" parent="Skeleton/Neck/Head/EyeL" unique_id=588165482]
+[node name="EyeWhiteL" type="Sprite2D" parent="Skeleton/Neck/Head/EyeL" unique_id=588165482]
 clip_children = 2
 texture = ExtResource("6_4lh0q")
 
-[node name="EyeIris" type="Sprite2D" parent="Skeleton/Neck/Head/EyeL/EyeWhite" unique_id=341975861]
+[node name="EyeIrisL" type="Sprite2D" parent="Skeleton/Neck/Head/EyeL/EyeWhiteL" unique_id=341975861]
 self_modulate = Color(0.12225223, 0.12225223, 0.12225223, 1)
 position = Vector2(19, -6)
 texture = ExtResource("7_7qyni")
 
-[node name="EyePupil" type="Sprite2D" parent="Skeleton/Neck/Head/EyeL/EyeWhite" unique_id=985907899]
+[node name="EyePupilL" type="Sprite2D" parent="Skeleton/Neck/Head/EyeL/EyeWhiteL/EyeIrisL" unique_id=985907899]
 self_modulate = Color(0, 0, 0, 1)
-position = Vector2(28, 1)
 texture = ExtResource("8_sougf")
 
-[node name="EyeShine" type="Sprite2D" parent="Skeleton/Neck/Head/EyeL/EyeWhite" unique_id=1157775595]
-position = Vector2(-19, -44)
+[node name="EyeShineL" type="Sprite2D" parent="Skeleton/Neck/Head/EyeL/EyeWhiteL/EyeIrisL" unique_id=1157775595]
 texture = ExtResource("9_p478o")
 
-[node name="Eyelash" type="Sprite2D" parent="Skeleton/Neck/Head/EyeL" unique_id=1147384990]
+[node name="EyelashL" type="Sprite2D" parent="Skeleton/Neck/Head/EyeL" unique_id=1147384990]
 self_modulate = Color(0, 0, 0, 1)
-position = Vector2(-34, -95)
 texture = ExtResource("10_2y1m1")
 
 [node name="EyeR" type="Sprite2D" parent="Skeleton/Neck/Head" unique_id=264065738]
 position = Vector2(211, -239)
 flip_h = true
 
-[node name="EyeWhite" type="Sprite2D" parent="Skeleton/Neck/Head/EyeR" unique_id=1754753503]
+[node name="EyeWhiteR" type="Sprite2D" parent="Skeleton/Neck/Head/EyeR" unique_id=1754753503]
 clip_children = 2
 texture = ExtResource("6_4lh0q")
 flip_h = true
 
-[node name="EyeIris" type="Sprite2D" parent="Skeleton/Neck/Head/EyeR/EyeWhite" unique_id=931340045]
+[node name="EyeIrisR" type="Sprite2D" parent="Skeleton/Neck/Head/EyeR/EyeWhiteR" unique_id=931340045]
 self_modulate = Color(0.12225223, 0.12225223, 0.12225223, 1)
 position = Vector2(-19, -6)
 texture = ExtResource("7_7qyni")
 flip_h = true
 
-[node name="EyePupil" type="Sprite2D" parent="Skeleton/Neck/Head/EyeR/EyeWhite" unique_id=1266060565]
+[node name="EyePupilR" type="Sprite2D" parent="Skeleton/Neck/Head/EyeR/EyeWhiteR/EyeIrisR" unique_id=1266060565]
 self_modulate = Color(0, 0, 0, 1)
-position = Vector2(-28, 1)
 texture = ExtResource("8_sougf")
 flip_h = true
 
-[node name="EyeShine" type="Sprite2D" parent="Skeleton/Neck/Head/EyeR/EyeWhite" unique_id=479120024]
-position = Vector2(-60, -46)
+[node name="EyeShineR" type="Sprite2D" parent="Skeleton/Neck/Head/EyeR/EyeWhiteR/EyeIrisR" unique_id=479120024]
 texture = ExtResource("9_p478o")
-flip_h = true
 
-[node name="Eyelash" type="Sprite2D" parent="Skeleton/Neck/Head/EyeR" unique_id=1300342766]
+[node name="EyelashR" type="Sprite2D" parent="Skeleton/Neck/Head/EyeR" unique_id=1300342766]
 self_modulate = Color(0, 0, 0, 1)
-position = Vector2(34, -95)
 texture = ExtResource("10_2y1m1")
 flip_h = true
 
@@ -288,12 +281,12 @@ self_modulate = Color(0, 0, 0, 1)
 position = Vector2(0, -97)
 texture = ExtResource("11_41u22")
 
-[node name="BrowL" type="Sprite2D" parent="Skeleton/Neck/Head" unique_id=1089568935 groups=["hair"]]
+[node name="BrowL" type="Sprite2D" parent="Skeleton/Neck/Head" unique_id=1089568935]
 self_modulate = Color(0, 0, 0, 1)
 position = Vector2(-153, -495)
 texture = ExtResource("12_8vsun")
 
-[node name="BrowR" type="Sprite2D" parent="Skeleton/Neck/Head" unique_id=156406920 groups=["hair"]]
+[node name="BrowR" type="Sprite2D" parent="Skeleton/Neck/Head" unique_id=156406920]
 self_modulate = Color(0, 0, 0, 1)
 position = Vector2(153, -495)
 texture = ExtResource("12_8vsun")
