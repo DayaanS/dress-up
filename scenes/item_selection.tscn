@@ -19,7 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-current_tab = 7
+current_tab = 6
 
 [node name="Bodies" type="ItemList" parent="TabContainer" unique_id=1846120978]
 unique_name_in_owner = true
@@ -89,7 +89,6 @@ metadata/_tab_index = 5
 
 [node name="ClothesList" type="ItemList" parent="TabContainer" unique_id=139898182]
 unique_name_in_owner = true
-visible = false
 layout_mode = 2
 theme = ExtResource("2_47dkk")
 select_mode = 2
@@ -99,6 +98,7 @@ fixed_icon_size = Vector2i(100, 100)
 metadata/_tab_index = 6
 
 [node name="Poses" type="TabContainer" parent="TabContainer" unique_id=111635627]
+visible = false
 layout_mode = 2
 current_tab = 1
 metadata/_tab_index = 7

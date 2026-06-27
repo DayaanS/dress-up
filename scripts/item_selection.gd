@@ -18,24 +18,21 @@ var current_item_nodes:Dictionary = {}
 
 
 # adds a skeleton base for item_parts to attach to and returns that node
-func add_skeleton():
-	var instance:Skeleton = skeleton_scene.instantiate()
-	outfit.add_child(instance)
-	return instance
-
 
 func add_item_to_body(all_items_data, index:int, selected: bool):
 	if selected == true:
-		var skeleton:Skeleton = add_skeleton()
+		var skeleton:Skeleton = skeleton_scene.instantiate()
+		outfit.add_child(skeleton)
 		skeleton.add_item(all_items_data[index])
-		#item_color_selection.add_item_colors(all_clothes_data[index])
-		current_item_nodes[index+1] = skeleton
+		current_item_nodes[index+1] = skeleton # + 1 cause item 0 is body
+		
 		layers_ui.add_layer_to_UI(all_items_data[index].item_id, selected, all_items_data[index].icon)
-
+	
 	else:
 		current_item_nodes[index+1].queue_free()
-		#item_color_selection.remove_item_colors()
+		
 		layers_ui.remove_layer_from_UI(all_items_data[index].item_id)
+
 
 
 # Called when the node enters the scene tree for the first time.
@@ -44,7 +41,8 @@ func _ready() -> void:
 	var body:Skeleton = body_scene.instantiate()
 	outfit.add_child(body)
 	current_item_nodes[0] = body
-
+	
+	# populate item selection ui with all items
 	for item in Global.all_clothes_data:
 		clothes_list.add_item(item.name, item.icon, true)
 	for item in Global.all_hair_back_data:
@@ -58,7 +56,7 @@ func _on_item_list_multi_selected(index: int, selected: bool) -> void:
 
 
 func _on_hair_front_multi_selected(index: int, selected: bool) -> void:
-	add_item_to_body(Global.all_hair_front_data,index,selected)
+	add_item_to_body(Global.all_hair_front_data,index, selected)
 
 
 func _on_hair_back_multi_selected(index: int, selected: bool) -> void:

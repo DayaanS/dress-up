@@ -70,9 +70,8 @@ func _on_to_bottom_pressed() -> void:
 
 func _on_item_list_item_selected(index: int) -> void:
 	var item_id = item_list.get_item_text(index)
-	print(item_id)
 	for item in Global.all_items_data:
 		if item_id == item.item_id:
-			print(item.item_id)
+			Global.selected_item = item
 			item_color_selection.add_item_colors(item)
 	

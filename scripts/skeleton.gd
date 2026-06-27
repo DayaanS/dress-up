@@ -23,6 +23,9 @@ func set_pose(category, index):
 		var animations_array = leg_animations.get_animation_list()
 		leg_animations.play(animations_array[index])
 
+func set_color(item_part:ItemPartNode, color):
+	item_part.color = color
+
 func add_item(item):
 	for item_part_data in item.parts:
 		add_item_part(item, item_part_data)

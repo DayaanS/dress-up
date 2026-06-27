@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://b61a51s63pxhe"]
 
 [ext_resource type="Script" uid="uid://dy8ruii43f7sv" path="res://scripts/item_color_selection.gd" id="1_k71m0"]
-[ext_resource type="Resource" uid="uid://cs3drpibsp75u" path="res://data/items/pants.tres" id="2_k71m0"]
 [ext_resource type="Theme" uid="uid://cdvgy38nflwke" path="res://data/ui_theme.tres" id="3_g2plc"]
 
 [node name="ItemColorSelection" type="Control" unique_id=1949384703]
@@ -12,7 +11,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_k71m0")
-item = ExtResource("2_k71m0")
 
 [node name="Panel" type="Panel" parent="." unique_id=566416004]
 layout_mode = 1

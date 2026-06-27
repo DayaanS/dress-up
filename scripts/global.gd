@@ -5,6 +5,9 @@ var all_hair_front_data:Array[Item] = []
 var all_hair_back_data:Array[Item] = []
 var all_items_data: Array[Item] = []
 
+var selected_item_node: Skeleton
+var selected_item:Item
+
 # gets Item files from path and returns the array of Items
 func get_items(path):
 	var items_array:Array[Item] = []
@@ -16,11 +19,12 @@ func get_items(path):
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	#pass # Replace with function body.
 	all_clothes_data = get_items("res://data/items/")
 	all_hair_back_data = get_items("res://data/hair_back/")
 	all_hair_front_data = get_items("res://data/hair_front/")
 	all_items_data = all_clothes_data + all_hair_back_data + all_hair_front_data
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
