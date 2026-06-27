@@ -4,6 +4,7 @@ var selected_layers_indexes = []
 @onready var item_list: ItemList = $VBoxContainer/ItemList
 @export var items_parent_node: Node2D
 @export var item_color_selection: Control
+@export var item_selection: Control
 
 var all_layers:Array[Node]
 var current_layer_count: int = 0
@@ -75,3 +76,13 @@ func _on_item_list_item_selected(index: int) -> void:
 			Global.selected_item = item
 			item_color_selection.add_item_colors(item)
 	
+
+
+func _on_remove_pressed() -> void:
+	if Global.selected_item:
+		var selected_item_array = Global.get_array_of_item(Global.selected_item)
+		var index = selected_item_array.find(Global.selected_item)
+		
+		item_selection.add_item_to_body(selected_item_array, index, false)
+	else:
+		pass

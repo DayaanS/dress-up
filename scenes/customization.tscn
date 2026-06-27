@@ -97,13 +97,14 @@ offset_top = 699.0
 offset_right = -1191.0
 offset_bottom = -52.0
 
-[node name="Layers" parent="UI" unique_id=136292836 node_paths=PackedStringArray("items_parent_node", "item_color_selection") instance=ExtResource("5_pb2oy")]
+[node name="Layers" parent="UI" unique_id=136292836 node_paths=PackedStringArray("items_parent_node", "item_color_selection", "item_selection") instance=ExtResource("5_pb2oy")]
 offset_left = 768.0
 offset_top = 86.0
 offset_right = -979.0
 offset_bottom = -50.0
 items_parent_node = NodePath("../../Outfit")
 item_color_selection = NodePath("../ItemColorSelection")
+item_selection = NodePath("../ItemSelection")
 
 [node name="Outfit" type="Node2D" parent="." unique_id=834148082]
 position = Vector2(1457, 572)

@@ -44,6 +44,10 @@ text = "down"
 layout_mode = 2
 text = "To Bottom"
 
+[node name="Remove" type="Button" parent="VBoxContainer" unique_id=1765267558]
+layout_mode = 2
+text = "Remove"
+
 [node name="LayersParent" type="Node2D" parent="." unique_id=2105855168]
 
 [node name="Character" type="Node2D" parent="LayersParent" unique_id=1296781245]
@@ -71,3 +75,4 @@ metadata/_custom_type_script = "uid://dk1k63cgf7t8x"
 [connection signal="pressed" from="VBoxContainer/Up" to="." method="_on_up_pressed"]
 [connection signal="pressed" from="VBoxContainer/Down" to="." method="_on_down_pressed"]
 [connection signal="pressed" from="VBoxContainer/ToBottom" to="." method="_on_to_bottom_pressed"]
+[connection signal="pressed" from="VBoxContainer/Remove" to="." method="_on_remove_pressed"]
