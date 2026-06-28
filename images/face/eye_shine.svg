@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="175.7701"
-   height="245.0392"
-   viewBox="0 0 46.505837 64.833287"
+   width="209.87996"
+   height="206.23318"
+   viewBox="0 0 55.530739 54.565862"
    version="1.1"
    id="svg5"
    xml:space="preserve"
@@ -27,9 +27,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
      showgrid="false"
-     inkscape:zoom="1.4142136"
-     inkscape:cx="44.901279"
-     inkscape:cy="222.03152"
+     inkscape:zoom="0.70710681"
+     inkscape:cx="-115.2584"
+     inkscape:cy="115.96551"
      inkscape:window-width="1920"
      inkscape:window-height="1012"
      inkscape:window-x="0"
@@ -37,7 +37,7 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="layer6"
      showguides="true"><sodipodi:guide
-       position="27.233409,-346.91517"
+       position="36.504568,-346.79694"
        orientation="0,1"
        id="guide1344"
        inkscape:locked="false"
@@ -48,10 +48,10 @@
      id="layer6"
      inkscape:label="head"
      style="display:inline"
-     transform="translate(-77.763581,-155.05988)"><circle
+     transform="translate(-68.492422,-165.44554)"><circle
        style="display:inline;fill:#ffffff;stroke-width:0.264583"
        id="path967"
-       cx="92.615639"
-       cy="175.4807"
+       cx="90.871078"
+       cy="180.51025"
        r="6.8612008"
        inkscape:label="eye_shine" /></g></svg>

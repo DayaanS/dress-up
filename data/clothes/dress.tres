@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://bbm0jwx7qkwjb"]
+
+[ext_resource type="Texture2D" uid="uid://djsuf2sybkgpn" path="res://images/icons/dress_icon.svg" id="1_bipw7"]
+[ext_resource type="Texture2D" uid="uid://tl8f7di7ople" path="res://images/clothing/dress.svg" id="1_j1qq6"]
+[ext_resource type="Script" uid="uid://83kjmk21x147" path="res://data/item_part.gd" id="2_bipw7"]
+[ext_resource type="Texture2D" uid="uid://1wytnsh4tre6" path="res://images/clothing/bow.svg" id="3_5lu54"]
+[ext_resource type="Script" uid="uid://c18v5m8wr0nyo" path="res://data/item.gd" id="4_nfush"]
+
+[sub_resource type="Resource" id="Resource_u18ls"]
+script = ExtResource("2_bipw7")
+name = "Dress base"
+sprite = ExtResource("1_j1qq6")
+parent_node_id = "Torso"
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_wt6xo"]
+script = ExtResource("2_bipw7")
+name = "Bow"
+sprite = ExtResource("3_5lu54")
+parent_node_id = "Torso"
+color_index = 1
+position_y = -190.0
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[resource]
+script = ExtResource("4_nfush")
+item_id = "dress_0"
+name = "Summer Dress"
+category = "Tops"
+icon = ExtResource("1_bipw7")
+parts = Array[ExtResource("2_bipw7")]([SubResource("Resource_u18ls"), SubResource("Resource_wt6xo")])
+colors = Array[Color]([Color(0.74509805, 0.83137256, 0.6509804, 1), Color(0.83137256, 0.26666668, 0.4627451, 1)])
+metadata/_custom_type_script = "uid://c18v5m8wr0nyo"

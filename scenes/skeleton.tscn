@@ -1,200 +1,12 @@
 [gd_scene format=3 uid="uid://bygkaghwhpgbu"]
 
 [ext_resource type="Script" uid="uid://dk1k63cgf7t8x" path="res://scripts/skeleton.gd" id="1_pbvs3"]
+[ext_resource type="AnimationLibrary" uid="uid://c6virqg3ktgtp" path="res://data/leg_l_animations.res" id="4_bnirc"]
+[ext_resource type="AnimationLibrary" uid="uid://bunjgmsqr0e3s" path="res://data/leg_r_animations.res" id="5_5pgwy"]
+[ext_resource type="AnimationLibrary" uid="uid://buifx45xi62bo" path="res://data/arm_l_animations.res" id="11_3nhjk"]
+[ext_resource type="AnimationLibrary" uid="uid://ihrboqk6e6fv" path="res://data/arm_r_animations.res" id="12_ghshk"]
 
 [sub_resource type="AnimationRootNode" id="AnimationRootNode_pbvs3"]
-
-[sub_resource type="Animation" id="Animation_epf45"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Skeleton/ArmL/ForearmL/HandL:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../Skeleton/ArmL/ForearmL:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../Skeleton/ArmL/ForearmL/HandL:flip_h")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
-[sub_resource type="Animation" id="Animation_at8vq"]
-resource_name = "hello_hand"
-length = 0.25
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Skeleton/ArmL/ForearmL/HandL:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.25),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.4984994]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../Skeleton/ArmL/ForearmL:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.25),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.8387531]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../Skeleton/ArmL/ForearmL/HandL:flip_h")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0.25),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
-[sub_resource type="Animation" id="Animation_pbvs3"]
-resource_name = "princess_hand"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Skeleton/ArmL/ForearmL/HandL:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 0.6241259]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_pbvs3"]
-_data = {
-&"RESET": SubResource("Animation_epf45"),
-&"hello_hand": SubResource("Animation_at8vq"),
-&"princess_hand": SubResource("Animation_pbvs3")
-}
-
-[sub_resource type="Animation" id="Animation_ivqcw"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("%ThighL:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("%CalfL:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
-[sub_resource type="Animation" id="Animation_bnirc"]
-resource_name = "leg_up"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("%ThighL:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, -0.14226943]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("%CalfL:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 0.30221242]
-}
-
-[sub_resource type="Animation" id="Animation_5pgwy"]
-resource_name = "leg_wide"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("%ThighL:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 0.18232231]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("%CalfL:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 0.10105978]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_txkty"]
-_data = {
-&"RESET": SubResource("Animation_ivqcw"),
-&"leg_up": SubResource("Animation_bnirc"),
-&"leg_wide": SubResource("Animation_5pgwy")
-}
 
 [node name="Skeleton" type="Node2D" unique_id=1248511463]
 script = ExtResource("1_pbvs3")
@@ -213,37 +25,9 @@ position = Vector2(0, -75)
 unique_name_in_owner = true
 position = Vector2(-211, -239)
 
-[node name="EyeWhiteL" type="Sprite2D" parent="Skeleton/Neck/Head/EyeL" unique_id=383399739]
-unique_name_in_owner = true
-
-[node name="EyeIrisL" type="Sprite2D" parent="Skeleton/Neck/Head/EyeL/EyeWhiteL" unique_id=1796046587]
-unique_name_in_owner = true
-self_modulate = Color(0.12225223, 0.12225223, 0.12225223, 1)
-position = Vector2(19, -6)
-
-[node name="EyeLashL" type="Sprite2D" parent="Skeleton/Neck/Head/EyeL" unique_id=980336628]
-unique_name_in_owner = true
-self_modulate = Color(0, 0, 0, 1)
-
 [node name="EyeR" type="Sprite2D" parent="Skeleton/Neck/Head" unique_id=2062967183]
 unique_name_in_owner = true
 position = Vector2(211, -239)
-flip_h = true
-
-[node name="EyeWhiteR" type="Sprite2D" parent="Skeleton/Neck/Head/EyeR" unique_id=1739050582]
-unique_name_in_owner = true
-flip_h = true
-
-[node name="EyeIrisR" type="Sprite2D" parent="Skeleton/Neck/Head/EyeR/EyeWhiteR" unique_id=936106989]
-unique_name_in_owner = true
-self_modulate = Color(0.12225223, 0.12225223, 0.12225223, 1)
-visibility_layer = 2
-position = Vector2(-19, -6)
-flip_h = true
-
-[node name="EyeLashR" type="Sprite2D" parent="Skeleton/Neck/Head/EyeR" unique_id=2004297756]
-unique_name_in_owner = true
-self_modulate = Color(0, 0, 0, 1)
 flip_h = true
 
 [node name="Mouth" type="Sprite2D" parent="Skeleton/Neck/Head" unique_id=1949470757]
@@ -313,13 +97,18 @@ flip_h = true
 
 [node name="Torso" type="Sprite2D" parent="Skeleton" unique_id=420369955]
 unique_name_in_owner = true
-self_modulate = Color(0.5489626, 0.5489626, 0.54896253, 1)
 
 [node name="AnimationTree" type="AnimationTree" parent="." unique_id=419597982]
 tree_root = SubResource("AnimationRootNode_pbvs3")
 
-[node name="ArmAnimations" type="AnimationPlayer" parent="AnimationTree" unique_id=1956823863]
-libraries/ = SubResource("AnimationLibrary_pbvs3")
+[node name="ArmLAnimations" type="AnimationPlayer" parent="AnimationTree" unique_id=1956823863]
+libraries/arm_l_animations = ExtResource("11_3nhjk")
 
-[node name="LegAnimations" type="AnimationPlayer" parent="AnimationTree" unique_id=1188759908]
-libraries/ = SubResource("AnimationLibrary_txkty")
+[node name="ArmRAnimations" type="AnimationPlayer" parent="AnimationTree" unique_id=840847188]
+libraries/arm_r_animations = ExtResource("12_ghshk")
+
+[node name="LegLAnimations" type="AnimationPlayer" parent="AnimationTree" unique_id=1188759908]
+libraries/ = ExtResource("4_bnirc")
+
+[node name="LegRAnimations" type="AnimationPlayer" parent="AnimationTree" unique_id=975690683]
+libraries/leg_r_animations = ExtResource("5_5pgwy")

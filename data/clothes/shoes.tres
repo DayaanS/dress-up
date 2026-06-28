@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://xrq31jsgeeye"]
+
+[ext_resource type="Texture2D" uid="uid://deunyftvtnejm" path="res://images/icons/shoes_icon.svg" id="1_dy7s1"]
+[ext_resource type="Script" uid="uid://83kjmk21x147" path="res://data/item_part.gd" id="2_diqon"]
+[ext_resource type="Texture2D" uid="uid://5wl65wu2ewmq" path="res://images/clothing/shoes.svg" id="3_nwnj0"]
+[ext_resource type="Script" uid="uid://c18v5m8wr0nyo" path="res://data/item.gd" id="4_na4tv"]
+
+[sub_resource type="Resource" id="Resource_gm3sb"]
+script = ExtResource("2_diqon")
+sprite = ExtResource("3_nwnj0")
+parent_node_id = "CalfL"
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_le7we"]
+script = ExtResource("2_diqon")
+sprite = ExtResource("3_nwnj0")
+parent_node_id = "CalfR"
+flip_h = true
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[resource]
+script = ExtResource("4_na4tv")
+item_id = "feet_0"
+name = "Shoes"
+category = "Feet"
+icon = ExtResource("1_dy7s1")
+parts = Array[ExtResource("2_diqon")]([SubResource("Resource_gm3sb"), SubResource("Resource_le7we")])
+colors = Array[Color]([Color(0.47928566, 0.099461995, 0.109940164, 1)])
+metadata/_custom_type_script = "uid://c18v5m8wr0nyo"

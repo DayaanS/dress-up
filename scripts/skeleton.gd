@@ -2,8 +2,10 @@ extends Node2D
 
 class_name Skeleton
 
-@onready var arm_animations: AnimationPlayer = $AnimationTree/ArmAnimations
-@onready var leg_animations: AnimationPlayer = $AnimationTree/LegAnimations
+@onready var arm_l_animations: AnimationPlayer = $AnimationTree/ArmLAnimations
+@onready var leg_l_animations: AnimationPlayer = $AnimationTree/LegLAnimations
+@onready var arm_r_animations: AnimationPlayer = $AnimationTree/ArmRAnimations
+@onready var leg_r_animations: AnimationPlayer = $AnimationTree/LegRAnimations
 
 
 func add_item_part(item:Item, item_part_data:ItemPart):
@@ -23,13 +25,22 @@ func add_item(item):
 
 
 func set_pose(category, index):
-	if category == "arm":
-		var arm_animations_array = arm_animations.get_animation_list()
-		arm_animations.play(arm_animations_array[index])
-		print(arm_animations_array)
-	elif category == "leg":
-		var animations_array = leg_animations.get_animation_list()
-		leg_animations.play(animations_array[index])
+	match category:
+		"arm_l":
+			play_animation(arm_l_animations, index)
+		"arm_r":
+			play_animation(arm_r_animations, index)
+		"leg_l":
+			play_animation(leg_l_animations, index)
+		"leg_r":
+			play_animation(leg_r_animations, index)
+
+func play_animation(animation_player:AnimationPlayer, index:int):
+	var animations_names_list = animation_player.get_animation_list()
+	animation_player.play(animations_names_list[0]) # reset animation 
+	animation_player.advance(0) # make sure first frame is immediatly used
+	animation_player.play(animations_names_list[index]) # play selected animation
+	animation_player.advance(0)
 
 
 func set_color(item_part:ItemPartNode, color):

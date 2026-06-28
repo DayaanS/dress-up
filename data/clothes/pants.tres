@@ -1,0 +1,55 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://cs3drpibsp75u"]
+
+[ext_resource type="Texture2D" uid="uid://cd3qud87qctf1" path="res://images/icons/pants_icon.svg" id="1_xav3w"]
+[ext_resource type="Script" uid="uid://83kjmk21x147" path="res://data/item_part.gd" id="2_0siko"]
+[ext_resource type="Texture2D" uid="uid://kmn5idwlocc0" path="res://images/clothing/pants_torso.svg" id="3_yigg2"]
+[ext_resource type="Texture2D" uid="uid://c86ewnjrk3im3" path="res://images/clothing/pants_thigh.svg" id="4_ao5xj"]
+[ext_resource type="Texture2D" uid="uid://bjyitcbrpidik" path="res://images/clothing/pants_calf.svg" id="5_kx3ka"]
+[ext_resource type="Script" uid="uid://c18v5m8wr0nyo" path="res://data/item.gd" id="6_lc5wd"]
+
+[sub_resource type="Resource" id="Resource_70uhc"]
+script = ExtResource("2_0siko")
+name = "Pants"
+sprite = ExtResource("3_yigg2")
+parent_node_id = "Torso"
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_03dgl"]
+script = ExtResource("2_0siko")
+name = "Pants"
+sprite = ExtResource("4_ao5xj")
+parent_node_id = "ThighL"
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_72dvx"]
+script = ExtResource("2_0siko")
+name = "Pants Calf"
+sprite = ExtResource("5_kx3ka")
+parent_node_id = "CalfL"
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_pte0k"]
+script = ExtResource("2_0siko")
+name = "Pants thigh"
+sprite = ExtResource("4_ao5xj")
+parent_node_id = "ThighR"
+flip_h = true
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_0d3v0"]
+script = ExtResource("2_0siko")
+name = "Pants Calf"
+sprite = ExtResource("5_kx3ka")
+parent_node_id = "CalfR"
+flip_h = true
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[resource]
+script = ExtResource("6_lc5wd")
+item_id = "bottom_0"
+name = "Pants"
+category = "Bottoms"
+icon = ExtResource("1_xav3w")
+parts = Array[ExtResource("2_0siko")]([SubResource("Resource_70uhc"), SubResource("Resource_03dgl"), SubResource("Resource_72dvx"), SubResource("Resource_pte0k"), SubResource("Resource_0d3v0")])
+colors = Array[Color]([Color(0.4627451, 0.63529414, 0.6862745, 1)])
+metadata/_custom_type_script = "uid://c18v5m8wr0nyo"

@@ -28,7 +28,8 @@ unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("2_47dkk")
 select_mode = 2
-fixed_icon_size = Vector2i(100, 100)
+max_columns = 3
+fixed_icon_size = Vector2i(150, 150)
 metadata/_tab_index = 0
 
 [node name="Eyes" type="ItemList" parent="TabContainer" unique_id=563983486]
@@ -37,9 +38,9 @@ visible = false
 layout_mode = 2
 theme = ExtResource("2_47dkk")
 select_mode = 2
-max_columns = 2
+max_columns = 3
 same_column_width = true
-fixed_icon_size = Vector2i(100, 100)
+fixed_icon_size = Vector2i(150, 150)
 metadata/_tab_index = 1
 
 [node name="Brows" type="ItemList" parent="TabContainer" unique_id=470007298]
@@ -48,9 +49,9 @@ visible = false
 layout_mode = 2
 theme = ExtResource("2_47dkk")
 select_mode = 2
-max_columns = 2
+max_columns = 3
 same_column_width = true
-fixed_icon_size = Vector2i(100, 100)
+fixed_icon_size = Vector2i(150, 150)
 metadata/_tab_index = 2
 
 [node name="Mouths" type="ItemList" parent="TabContainer" unique_id=1411032532]
@@ -59,9 +60,9 @@ visible = false
 layout_mode = 2
 theme = ExtResource("2_47dkk")
 select_mode = 2
-max_columns = 2
+max_columns = 3
 same_column_width = true
-fixed_icon_size = Vector2i(100, 100)
+fixed_icon_size = Vector2i(150, 150)
 metadata/_tab_index = 3
 
 [node name="Hair" type="ItemList" parent="TabContainer" unique_id=1551341964]
@@ -70,8 +71,9 @@ visible = false
 layout_mode = 2
 theme = ExtResource("2_47dkk")
 select_mode = 2
+max_columns = 3
 same_column_width = true
-fixed_icon_size = Vector2i(100, 100)
+fixed_icon_size = Vector2i(150, 150)
 metadata/_tab_index = 4
 
 [node name="Clothes" type="ItemList" parent="TabContainer" unique_id=139898182]
@@ -80,36 +82,52 @@ visible = false
 layout_mode = 2
 theme = ExtResource("2_47dkk")
 select_mode = 2
+max_columns = 3
 same_column_width = true
-fixed_icon_size = Vector2i(100, 100)
+fixed_icon_size = Vector2i(150, 150)
 metadata/_tab_index = 5
 metadata/_tab_name = "Clothes"
+
+[node name="Accessories" type="ItemList" parent="TabContainer" unique_id=1579073292]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme = ExtResource("2_47dkk")
+select_mode = 2
+max_columns = 3
+same_column_width = true
+fixed_icon_size = Vector2i(150, 150)
+metadata/_tab_index = 6
 
 [node name="Poses" type="TabContainer" parent="TabContainer" unique_id=111635627]
 visible = false
 layout_mode = 2
 theme = ExtResource("2_47dkk")
-current_tab = 1
-metadata/_tab_index = 6
+current_tab = 0
+metadata/_tab_index = 7
 
 [node name="ArmLPoses" type="ItemList" parent="TabContainer/Poses" unique_id=1924849498]
+layout_mode = 2
+theme = ExtResource("2_47dkk")
+metadata/_tab_index = 0
+
+[node name="ArmRPoses" type="ItemList" parent="TabContainer/Poses" unique_id=1203065991]
 visible = false
 layout_mode = 2
 theme = ExtResource("2_47dkk")
-item_count = 3
-item_0/text = "Reset"
-item_1/text = "Arm hello"
-item_2/text = "Arm princess"
-metadata/_tab_index = 0
+metadata/_tab_index = 1
 
 [node name="LegLPoses" type="ItemList" parent="TabContainer/Poses" unique_id=1327524725]
+visible = false
 layout_mode = 2
 theme = ExtResource("2_47dkk")
-item_count = 3
-item_0/text = "Reset"
-item_1/text = "Leg Up"
-item_2/text = "Leg Wide"
-metadata/_tab_index = 1
+metadata/_tab_index = 2
+
+[node name="LegRPoses" type="ItemList" parent="TabContainer/Poses" unique_id=539504523]
+visible = false
+layout_mode = 2
+theme = ExtResource("2_47dkk")
+metadata/_tab_index = 3
 
 [connection signal="multi_selected" from="TabContainer/Bodies" to="." method="_on_bodies_multi_selected"]
 [connection signal="multi_selected" from="TabContainer/Eyes" to="." method="_on_eyes_multi_selected"]
@@ -117,5 +135,8 @@ metadata/_tab_index = 1
 [connection signal="multi_selected" from="TabContainer/Mouths" to="." method="_on_mouths_multi_selected"]
 [connection signal="multi_selected" from="TabContainer/Hair" to="." method="_on_hair_multi_selected"]
 [connection signal="multi_selected" from="TabContainer/Clothes" to="." method="_on_clothes_list_multi_selected"]
+[connection signal="multi_selected" from="TabContainer/Accessories" to="." method="_on_accessories_multi_selected"]
 [connection signal="item_selected" from="TabContainer/Poses/ArmLPoses" to="." method="_on_arm_l_poses_item_selected"]
+[connection signal="item_selected" from="TabContainer/Poses/ArmRPoses" to="." method="_on_arm_r_poses_item_selected"]
 [connection signal="item_selected" from="TabContainer/Poses/LegLPoses" to="." method="_on_leg_l_poses_item_selected"]
+[connection signal="item_selected" from="TabContainer/Poses/LegRPoses" to="." method="_on_leg_r_poses_item_selected"]

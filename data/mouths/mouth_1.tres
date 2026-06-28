@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://bsxjhbvamudef"]
+
+[ext_resource type="Texture2D" uid="uid://dnt3bvg5cvq6u" path="res://images/face/mouth_1.svg" id="1_js5e4"]
+[ext_resource type="Texture2D" uid="uid://xr08qg2815pk" path="res://images/icons/mouth_1_icon.svg" id="1_pnjmg"]
+[ext_resource type="Script" uid="uid://83kjmk21x147" path="res://data/item_part.gd" id="2_pnjmg"]
+[ext_resource type="Script" uid="uid://c18v5m8wr0nyo" path="res://data/item.gd" id="3_boqf5"]
+
+[sub_resource type="Resource" id="Resource_7d1b6"]
+script = ExtResource("2_pnjmg")
+sprite = ExtResource("1_js5e4")
+parent_node_id = "Mouth"
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[resource]
+script = ExtResource("3_boqf5")
+item_id = "mouth_1"
+name = "Frown"
+icon = ExtResource("1_pnjmg")
+parts = Array[ExtResource("2_pnjmg")]([SubResource("Resource_7d1b6")])
+colors = Array[Color]([Color(0, 0, 0, 1)])
+metadata/_custom_type_script = "uid://c18v5m8wr0nyo"

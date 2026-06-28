@@ -1,0 +1,72 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://b30xrdu0ofmcr"]
+
+[ext_resource type="Texture2D" uid="uid://dxgfenfnfg8wm" path="res://images/icons/sweater_icon.svg" id="1_xoaj0"]
+[ext_resource type="Script" uid="uid://83kjmk21x147" path="res://data/item_part.gd" id="2_513xl"]
+[ext_resource type="Texture2D" uid="uid://dlj5uvxgdjmf8" path="res://images/clothing/sweater_torso.svg" id="3_bwxvc"]
+[ext_resource type="Texture2D" uid="uid://cfx7g00oyt57o" path="res://images/clothing/sweater_arm.svg" id="4_vejeb"]
+[ext_resource type="Texture2D" uid="uid://cemijd4noyyvr" path="res://images/clothing/sweater_forearm.svg" id="5_4fg0j"]
+[ext_resource type="Texture2D" uid="uid://cpfwwtdyyw35d" path="res://images/clothing/sweater_hand.svg" id="6_dqgbn"]
+[ext_resource type="Script" uid="uid://c18v5m8wr0nyo" path="res://data/item.gd" id="7_ffaqo"]
+
+[sub_resource type="Resource" id="Resource_klws3"]
+script = ExtResource("2_513xl")
+name = "Sweater"
+sprite = ExtResource("3_bwxvc")
+parent_node_id = "Torso"
+color_index = 1
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_e1mn7"]
+script = ExtResource("2_513xl")
+name = "Sleeve"
+sprite = ExtResource("4_vejeb")
+parent_node_id = "ArmL"
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_5lbe8"]
+script = ExtResource("2_513xl")
+name = "Sweater"
+sprite = ExtResource("4_vejeb")
+parent_node_id = "ArmR"
+flip_h = true
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_cdtr7"]
+script = ExtResource("2_513xl")
+name = "Sweater"
+sprite = ExtResource("5_4fg0j")
+parent_node_id = "ForearmL"
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_6tomb"]
+script = ExtResource("2_513xl")
+name = "Sweater"
+sprite = ExtResource("5_4fg0j")
+parent_node_id = "ForearmR"
+flip_h = true
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_hwsig"]
+script = ExtResource("2_513xl")
+name = "Sweater"
+sprite = ExtResource("6_dqgbn")
+parent_node_id = "HandL"
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_37m0o"]
+script = ExtResource("2_513xl")
+name = "Sweater"
+sprite = ExtResource("6_dqgbn")
+parent_node_id = "HandR"
+flip_h = true
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[resource]
+script = ExtResource("7_ffaqo")
+item_id = "coat_0"
+name = "V Neck Sweater"
+category = "Tops"
+icon = ExtResource("1_xoaj0")
+parts = Array[ExtResource("2_513xl")]([SubResource("Resource_klws3"), SubResource("Resource_e1mn7"), SubResource("Resource_5lbe8"), SubResource("Resource_cdtr7"), SubResource("Resource_6tomb"), SubResource("Resource_hwsig"), SubResource("Resource_37m0o")])
+colors = Array[Color]([Color(0.89411765, 0.48235294, 0.5882353, 1), Color(0.90588236, 0.5372549, 0.6313726, 1)])
+metadata/_custom_type_script = "uid://c18v5m8wr0nyo"

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://tdoaogxjnnun"]
+
+[ext_resource type="Texture2D" uid="uid://cstlyeh053r4f" path="res://images/face/mouth.svg" id="1_1sotl"]
+[ext_resource type="Script" uid="uid://83kjmk21x147" path="res://data/item_part.gd" id="1_2khsl"]
+[ext_resource type="Texture2D" uid="uid://be6sghpt3rc6k" path="res://images/icons/mouth_0_icon.svg" id="1_7d1b6"]
+[ext_resource type="Script" uid="uid://c18v5m8wr0nyo" path="res://data/item.gd" id="2_1sotl"]
+
+[sub_resource type="Resource" id="Resource_7d1b6"]
+script = ExtResource("1_2khsl")
+name = "Smile"
+sprite = ExtResource("1_1sotl")
+parent_node_id = "Mouth"
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[resource]
+script = ExtResource("2_1sotl")
+item_id = "mouth_0"
+name = "Smile"
+icon = ExtResource("1_7d1b6")
+parts = Array[ExtResource("1_2khsl")]([SubResource("Resource_7d1b6")])
+colors = Array[Color]([Color(0, 0, 0, 1)])
+metadata/_custom_type_script = "uid://c18v5m8wr0nyo"

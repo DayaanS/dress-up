@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://bpmeul8ueuvdf"]
+
+[ext_resource type="Texture2D" uid="uid://dyeff0lci8rl3" path="res://images/icons/brow_2_icon.svg" id="1_sk8h6"]
+[ext_resource type="Script" uid="uid://83kjmk21x147" path="res://data/item_part.gd" id="2_sk8h6"]
+[ext_resource type="Script" uid="uid://c18v5m8wr0nyo" path="res://data/item.gd" id="3_jwnqw"]
+[ext_resource type="Texture2D" uid="uid://u64hjumn1yxh" path="res://images/face/brow_2.svg" id="3_sk8h6"]
+
+[sub_resource type="Resource" id="Resource_tgsx7"]
+script = ExtResource("2_sk8h6")
+name = "Brows"
+sprite = ExtResource("3_sk8h6")
+parent_node_id = "BrowL"
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_i0dnv"]
+script = ExtResource("2_sk8h6")
+name = "Brows"
+sprite = ExtResource("3_sk8h6")
+parent_node_id = "BrowR"
+flip_h = true
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[resource]
+script = ExtResource("3_jwnqw")
+item_id = "brows_1"
+icon = ExtResource("1_sk8h6")
+parts = Array[ExtResource("2_sk8h6")]([SubResource("Resource_tgsx7"), SubResource("Resource_i0dnv")])
+colors = Array[Color]([Color(0, 0, 0, 1)])
+metadata/_custom_type_script = "uid://c18v5m8wr0nyo"

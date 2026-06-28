@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://bdnud4d855a52"]
+
+[ext_resource type="Script" uid="uid://83kjmk21x147" path="res://data/item_part.gd" id="1_0hiq3"]
+[ext_resource type="Texture2D" uid="uid://bl21vtc7rjs8d" path="res://images/icons/flower.svg" id="1_wn1nx"]
+[ext_resource type="Script" uid="uid://c18v5m8wr0nyo" path="res://data/item.gd" id="2_wn1nx"]
+[ext_resource type="Texture2D" uid="uid://cow8tedjllpx1" path="res://images/accessories/flower_leaves.svg" id="3_88u11"]
+[ext_resource type="Texture2D" uid="uid://cy1c6puu2731q" path="res://images/accessories/flower_petals.svg" id="4_1eemv"]
+[ext_resource type="Texture2D" uid="uid://cr2oastfpb374" path="res://images/accessories/flower_center.svg" id="5_v8g2a"]
+
+[sub_resource type="Resource" id="Resource_2y8s5"]
+script = ExtResource("1_0hiq3")
+name = "Leaves"
+sprite = ExtResource("3_88u11")
+parent_node_id = "Head"
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_g1ro7"]
+script = ExtResource("1_0hiq3")
+name = "Petals"
+sprite = ExtResource("4_1eemv")
+parent_node_id = "Head"
+color_index = 1
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_rx5c0"]
+script = ExtResource("1_0hiq3")
+name = "Center"
+sprite = ExtResource("5_v8g2a")
+parent_node_id = "Head"
+color_index = 2
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[resource]
+script = ExtResource("2_wn1nx")
+item_id = "flower"
+name = "Flower Hair Clip"
+icon = ExtResource("1_wn1nx")
+parts = Array[ExtResource("1_0hiq3")]([SubResource("Resource_2y8s5"), SubResource("Resource_g1ro7"), SubResource("Resource_rx5c0")])
+colors = Array[Color]([Color(0.47058824, 0.5803922, 0.2901961, 1), Color(0.58431375, 0.10980392, 0.10980392, 1), Color(0.8745098, 0.7176471, 0.35686275, 1)])
+metadata/_custom_type_script = "uid://c18v5m8wr0nyo"

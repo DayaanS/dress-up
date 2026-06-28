@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://k2id3wxikx0"]
+
+[ext_resource type="Texture2D" uid="uid://bs2m1howl3ybi" path="res://images/icons/top_icon.svg" id="1_0ki7a"]
+[ext_resource type="Script" uid="uid://83kjmk21x147" path="res://data/item_part.gd" id="2_e7yia"]
+[ext_resource type="Texture2D" uid="uid://c1lhp18tk4bfo" path="res://images/clothing/top_torso.svg" id="3_61dsn"]
+[ext_resource type="Texture2D" uid="uid://dsvowul2ka3sf" path="res://images/clothing/top.svg" id="4_omshh"]
+[ext_resource type="Script" uid="uid://c18v5m8wr0nyo" path="res://data/item.gd" id="5_pr8f6"]
+
+[sub_resource type="Resource" id="Resource_g1xq8"]
+script = ExtResource("2_e7yia")
+name = "Torso"
+sprite = ExtResource("3_61dsn")
+parent_node_id = "Torso"
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_753j5"]
+script = ExtResource("2_e7yia")
+name = "Sleeve"
+sprite = ExtResource("4_omshh")
+parent_node_id = "ArmL"
+color_index = 1
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_d4dsl"]
+script = ExtResource("2_e7yia")
+name = "Sleeve"
+sprite = ExtResource("4_omshh")
+parent_node_id = "ArmR"
+color_index = 1
+flip_h = true
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[resource]
+script = ExtResource("5_pr8f6")
+item_id = "top_0"
+name = "Blouse"
+category = "Tops"
+icon = ExtResource("1_0ki7a")
+parts = Array[ExtResource("2_e7yia")]([SubResource("Resource_g1xq8"), SubResource("Resource_753j5"), SubResource("Resource_d4dsl")])
+colors = Array[Color]([Color(0.8156863, 0.6431373, 0.8235294, 1), Color(0.7764706, 0.60784316, 0.7921569, 1)])
+metadata/_custom_type_script = "uid://c18v5m8wr0nyo"

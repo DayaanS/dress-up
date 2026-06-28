@@ -6,14 +6,18 @@ extends Control
 @onready var mouths_list: ItemList = %Mouths
 @onready var hair_list: ItemList = %Hair
 @onready var clothes_list: ItemList = %Clothes
+@onready var accessories_list: ItemList = %Accessories
+@onready var arm_l_poses_list: ItemList = $TabContainer/Poses/ArmLPoses
+@onready var leg_l_poses_list: ItemList = $TabContainer/Poses/LegLPoses
+@onready var arm_r_poses_list: ItemList = $TabContainer/Poses/ArmRPoses
+@onready var leg_r_poses_list: ItemList = $TabContainer/Poses/LegRPoses
 
 @export var layers_ui: Control
 @export var outfit: Node2D
 
 var skeleton_scene = preload("res://scenes/skeleton.tscn")
-var body_scene = preload("res://scenes/body.tscn")
 
-var current_item_nodes:Dictionary = {}
+var current_item_nodes: Dictionary[String, Skeleton] = {}
 
 @onready var item_color_selection: Control = $"../ItemColorSelection"
 
@@ -55,23 +59,41 @@ func deselect_item(selected_item_array, index):
 			hair_list.deselect(index)
 		Global.all_clothes_data:
 			clothes_list.deselect(index)
+		Global.all_accessories_data:
+			accessories_list.deselect(index)
 
+func set_pose_for_limb(limb: String, index: int):
+	for key in current_item_nodes:
+		if current_item_nodes[key] != null and is_instance_valid(current_item_nodes[key]):
+			current_item_nodes[key].set_pose(limb, index)
 
 # Called when the node enters the scene tree for the first time.
-# Populates ItemList nodes with item icons and names
+# Populates ItemList nodes with item or and names
 func _ready() -> void:
 	for item in Global.all_bodies_data:
-		bodies_list.add_item(item.name, item.icon, true)
+		bodies_list.add_icon_item(item.icon)
 	for item in Global.all_eyes_data:
-		eyes_list.add_item(item.name, item.icon, true)
+		eyes_list.add_icon_item(item.icon)
 	for item in Global.all_brows_data:
-		brows_list.add_item(item.name, item.icon, true)
+		brows_list.add_icon_item(item.icon)
 	for item in Global.all_mouths_data:
-		mouths_list.add_item(item.name, item.icon, true)
+		mouths_list.add_icon_item(item.icon)
 	for item in Global.all_hair_data:
-		hair_list.add_item(item.name, item.icon, true)
+		hair_list.add_icon_item(item.icon)
 	for item in Global.all_clothes_data:
-		clothes_list.add_item(item.name, item.icon, true)
+		clothes_list.add_icon_item(item.icon)
+	for item in Global.all_accessories_data:
+		accessories_list.add_icon_item(item.icon)
+	
+	for animation in Global.arm_l_animations.get_animation_list():
+		arm_l_poses_list.add_item(animation)
+	for animation in Global.arm_r_animations.get_animation_list():
+		arm_r_poses_list.add_item(animation)
+	for animation in Global.leg_l_animations.get_animation_list():
+		leg_l_poses_list.add_item(animation)
+	for animation in Global.leg_r_animations.get_animation_list():
+		leg_r_poses_list.add_item(animation)
+	
 	Global.connect("update_color", Callable (self, "reselect_item"))
 
 
@@ -99,11 +121,18 @@ func _on_clothes_list_multi_selected(index: int, selected: bool) -> void:
 	add_item_to_body(Global.all_clothes_data, index, selected)
 
 
-func _on_arm_l_poses_item_selected(index: int) -> void:
-	for key in current_item_nodes:
-		current_item_nodes[key].set_pose("arm", index)
+func _on_accessories_multi_selected(index: int, selected: bool) -> void:
+	add_item_to_body(Global.all_accessories_data, index, selected)
 
+
+func _on_arm_l_poses_item_selected(index: int) -> void:
+	set_pose_for_limb("arm_l", index)
+
+func _on_arm_r_poses_item_selected(index: int) -> void:
+	set_pose_for_limb("arm_r", index)
 
 func _on_leg_l_poses_item_selected(index: int) -> void:
-	for key in current_item_nodes:
-		current_item_nodes[key].set_pose("leg", index)
+	set_pose_for_limb("leg_l", index)
+
+func _on_leg_r_poses_item_selected(index: int) -> void:
+	set_pose_for_limb("leg_r", index)

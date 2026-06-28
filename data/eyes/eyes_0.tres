@@ -1,0 +1,100 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://2ijay5vgg1ft"]
+
+[ext_resource type="Texture2D" uid="uid://dpdxh6nyey47c" path="res://images/icons/eyes_0.svg" id="1_cbqsf"]
+[ext_resource type="Script" uid="uid://83kjmk21x147" path="res://data/item_part.gd" id="2_at1gu"]
+[ext_resource type="Texture2D" uid="uid://db42i8mwy7fbp" path="res://images/face/eye_white.svg" id="3_k478a"]
+[ext_resource type="Texture2D" uid="uid://c4uofwiqrw70a" path="res://images/face/eye_iris.svg" id="4_guvxo"]
+[ext_resource type="Texture2D" uid="uid://bvn1d44onp87p" path="res://images/face/eye_pupil.svg" id="5_lb6cl"]
+[ext_resource type="Texture2D" uid="uid://77um4vdxq3w6" path="res://images/face/eye_shine.svg" id="6_ggsd0"]
+[ext_resource type="Texture2D" uid="uid://d0jmkskje2jns" path="res://images/face/eye_lash.svg" id="7_qbb3b"]
+[ext_resource type="Script" uid="uid://c18v5m8wr0nyo" path="res://data/item.gd" id="8_basld"]
+
+[sub_resource type="Resource" id="Resource_lpaws"]
+script = ExtResource("2_at1gu")
+name = "Eye White"
+sprite = ExtResource("3_k478a")
+parent_node_id = "EyeL"
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_1p2ke"]
+script = ExtResource("2_at1gu")
+name = "Iris"
+sprite = ExtResource("4_guvxo")
+parent_node_id = "EyeL"
+color_index = 1
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_3f8ll"]
+script = ExtResource("2_at1gu")
+name = "Pupil"
+sprite = ExtResource("5_lb6cl")
+parent_node_id = "EyeL"
+color_index = 2
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_dka23"]
+script = ExtResource("2_at1gu")
+name = "Eye Shine"
+sprite = ExtResource("6_ggsd0")
+parent_node_id = "EyeL"
+color_index = 3
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_ucyen"]
+script = ExtResource("2_at1gu")
+name = "Eyelash"
+sprite = ExtResource("7_qbb3b")
+parent_node_id = "EyeL"
+color_index = 4
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_cbqsf"]
+script = ExtResource("2_at1gu")
+name = "Eye White"
+sprite = ExtResource("3_k478a")
+parent_node_id = "EyeR"
+flip_h = true
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_at1gu"]
+script = ExtResource("2_at1gu")
+name = "Iris"
+sprite = ExtResource("4_guvxo")
+parent_node_id = "EyeR"
+color_index = 1
+flip_h = true
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_k478a"]
+script = ExtResource("2_at1gu")
+name = "Pupil"
+sprite = ExtResource("5_lb6cl")
+parent_node_id = "EyeR"
+color_index = 2
+flip_h = true
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_guvxo"]
+script = ExtResource("2_at1gu")
+name = "Eye Shine"
+sprite = ExtResource("6_ggsd0")
+parent_node_id = "EyeR"
+color_index = 3
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[sub_resource type="Resource" id="Resource_lb6cl"]
+script = ExtResource("2_at1gu")
+name = "Eyelash"
+sprite = ExtResource("7_qbb3b")
+parent_node_id = "EyeR"
+color_index = 4
+flip_h = true
+metadata/_custom_type_script = "uid://83kjmk21x147"
+
+[resource]
+script = ExtResource("8_basld")
+item_id = "eyes_0"
+icon = ExtResource("1_cbqsf")
+parts = Array[ExtResource("2_at1gu")]([SubResource("Resource_lpaws"), SubResource("Resource_1p2ke"), SubResource("Resource_3f8ll"), SubResource("Resource_dka23"), SubResource("Resource_ucyen"), SubResource("Resource_cbqsf"), SubResource("Resource_at1gu"), SubResource("Resource_k478a"), SubResource("Resource_guvxo"), SubResource("Resource_lb6cl")])
+colors = Array[Color]([Color(1, 1, 1, 1), Color(0.2612719, 0.11241569, 0.07967018, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)])
+metadata/_custom_type_script = "uid://c18v5m8wr0nyo"

@@ -6,8 +6,13 @@ var all_mouths_data: Array[Item] = []
 var all_hair_data:Array[Item] = []
 var all_clothes_data:Array[Item] = []
 var all_items_data: Array[Item] = []
-
+var all_accessories_data: Array[Item] = []
 var selected_item:Item
+
+var arm_l_animations: AnimationLibrary = load("res://data/arm_l_animations.res")
+var arm_r_animations: AnimationLibrary = load("res://data/arm_r_animations.res")
+var leg_l_animations: AnimationLibrary = load("res://data/leg_l_animations.res")
+var leg_r_animations: AnimationLibrary = load("res://data/leg_r_animations.res")
 
 signal update_color(item)
 
@@ -33,6 +38,9 @@ func get_array_of_item(selected_item: Item):
 	for item in all_clothes_data:
 		if selected_item == item:
 			return all_clothes_data
+	for item in all_accessories_data:
+		if selected_item == item:
+			return all_accessories_data
 
 
 # gets Item files from path and returns the array of Items
@@ -52,6 +60,6 @@ func _ready() -> void:
 	all_brows_data = get_items("res://data/brows/")
 	all_mouths_data = get_items("res://data/mouths/")
 	all_hair_data = get_items("res://data/hair/")
-	all_clothes_data = get_items("res://data/items/")
-	
-	all_items_data = all_bodies_data+all_eyes_data+all_brows_data+all_mouths_data+all_hair_data+all_clothes_data 
+	all_clothes_data = get_items("res://data/clothes/")
+	all_accessories_data = get_items("res://data/accessories/")
+	all_items_data = all_bodies_data+all_eyes_data+all_brows_data+all_mouths_data+all_hair_data+all_clothes_data+all_accessories_data

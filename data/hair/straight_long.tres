@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="Item" format=3 uid="uid://qxhw0iqe21cb"]
 
 [ext_resource type="Texture2D" uid="uid://c7i5qger8rbxu" path="res://images/hair/hair_long_back.svg" id="1_71kk4"]
+[ext_resource type="Texture2D" uid="uid://dumec78vos7hv" path="res://images/icons/hair_back_long_icon.svg" id="1_v46cw"]
 [ext_resource type="Script" uid="uid://83kjmk21x147" path="res://data/item_part.gd" id="2_v46cw"]
 [ext_resource type="Script" uid="uid://c18v5m8wr0nyo" path="res://data/item.gd" id="3_fov00"]
 
@@ -13,7 +14,7 @@ metadata/_custom_type_script = "uid://83kjmk21x147"
 [resource]
 script = ExtResource("3_fov00")
 item_id = "hair_back_0"
-icon = ExtResource("1_71kk4")
+icon = ExtResource("1_v46cw")
 parts = Array[ExtResource("2_v46cw")]([SubResource("Resource_5xe1y")])
 colors = Array[Color]([Color(0, 0, 0, 1)])
 metadata/_custom_type_script = "uid://c18v5m8wr0nyo"
