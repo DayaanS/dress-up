@@ -1,8 +1,10 @@
 extends Node2D
+
 class_name Skeleton
 
 @onready var arm_animations: AnimationPlayer = $AnimationTree/ArmAnimations
 @onready var leg_animations: AnimationPlayer = $AnimationTree/LegAnimations
+
 
 func add_item_part(item:Item, item_part_data:ItemPart):
 	var item_part = ItemPartNode.new()
@@ -14,6 +16,12 @@ func add_item_part(item:Item, item_part_data:ItemPart):
 	var parent = get_node("%"+item_part_data.parent_node_id)
 	parent.add_child(item_part)
 
+
+func add_item(item):
+	for item_part_data in item.parts:
+		add_item_part(item, item_part_data)
+
+
 func set_pose(category, index):
 	if category == "arm":
 		var arm_animations_array = arm_animations.get_animation_list()
@@ -23,19 +31,6 @@ func set_pose(category, index):
 		var animations_array = leg_animations.get_animation_list()
 		leg_animations.play(animations_array[index])
 
+
 func set_color(item_part:ItemPartNode, color):
 	item_part.color = color
-
-func add_item(item):
-	for item_part_data in item.parts:
-		add_item_part(item, item_part_data)
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass
-	
-	

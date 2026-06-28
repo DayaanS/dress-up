@@ -10,35 +10,40 @@
 
 [sub_resource type="Resource" id="Resource_lpaws"]
 script = ExtResource("1_nudcu")
+name = "Eye White"
 sprite = ExtResource("3_0v4tl")
-parent_node_id = "EyeWhiteL"
+parent_node_id = "EyeL"
 metadata/_custom_type_script = "uid://83kjmk21x147"
 
 [sub_resource type="Resource" id="Resource_1p2ke"]
 script = ExtResource("1_nudcu")
+name = "Iris"
 sprite = ExtResource("4_xndjd")
-parent_node_id = "EyeIrisL"
+parent_node_id = "EyeL"
 color_index = 1
 metadata/_custom_type_script = "uid://83kjmk21x147"
 
 [sub_resource type="Resource" id="Resource_3f8ll"]
 script = ExtResource("1_nudcu")
+name = "Pupil"
 sprite = ExtResource("5_vd16x")
-parent_node_id = "EyeIrisL"
+parent_node_id = "EyeL"
 color_index = 2
 metadata/_custom_type_script = "uid://83kjmk21x147"
 
 [sub_resource type="Resource" id="Resource_dka23"]
 script = ExtResource("1_nudcu")
+name = "Eye Shine"
 sprite = ExtResource("6_pywkd")
-parent_node_id = "EyeIrisL"
+parent_node_id = "EyeL"
 color_index = 3
 metadata/_custom_type_script = "uid://83kjmk21x147"
 
 [sub_resource type="Resource" id="Resource_ucyen"]
 script = ExtResource("1_nudcu")
+name = "Eyelash"
 sprite = ExtResource("1_rx114")
-parent_node_id = "EyeLashL"
+parent_node_id = "EyeL"
 color_index = 4
 metadata/_custom_type_script = "uid://83kjmk21x147"
 

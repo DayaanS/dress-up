@@ -210,44 +210,54 @@ unique_name_in_owner = true
 position = Vector2(0, -75)
 
 [node name="EyeL" type="Sprite2D" parent="Skeleton/Neck/Head" unique_id=1098953377]
+unique_name_in_owner = true
 position = Vector2(-211, -239)
 
 [node name="EyeWhiteL" type="Sprite2D" parent="Skeleton/Neck/Head/EyeL" unique_id=383399739]
-clip_children = 2
+unique_name_in_owner = true
 
 [node name="EyeIrisL" type="Sprite2D" parent="Skeleton/Neck/Head/EyeL/EyeWhiteL" unique_id=1796046587]
+unique_name_in_owner = true
 self_modulate = Color(0.12225223, 0.12225223, 0.12225223, 1)
 position = Vector2(19, -6)
 
-[node name="EyelashL" type="Sprite2D" parent="Skeleton/Neck/Head/EyeL" unique_id=980336628]
+[node name="EyeLashL" type="Sprite2D" parent="Skeleton/Neck/Head/EyeL" unique_id=980336628]
+unique_name_in_owner = true
 self_modulate = Color(0, 0, 0, 1)
 
 [node name="EyeR" type="Sprite2D" parent="Skeleton/Neck/Head" unique_id=2062967183]
+unique_name_in_owner = true
 position = Vector2(211, -239)
 flip_h = true
 
 [node name="EyeWhiteR" type="Sprite2D" parent="Skeleton/Neck/Head/EyeR" unique_id=1739050582]
-clip_children = 2
+unique_name_in_owner = true
 flip_h = true
 
 [node name="EyeIrisR" type="Sprite2D" parent="Skeleton/Neck/Head/EyeR/EyeWhiteR" unique_id=936106989]
+unique_name_in_owner = true
 self_modulate = Color(0.12225223, 0.12225223, 0.12225223, 1)
+visibility_layer = 2
 position = Vector2(-19, -6)
 flip_h = true
 
-[node name="EyelashR" type="Sprite2D" parent="Skeleton/Neck/Head/EyeR" unique_id=2004297756]
+[node name="EyeLashR" type="Sprite2D" parent="Skeleton/Neck/Head/EyeR" unique_id=2004297756]
+unique_name_in_owner = true
 self_modulate = Color(0, 0, 0, 1)
 flip_h = true
 
 [node name="Mouth" type="Sprite2D" parent="Skeleton/Neck/Head" unique_id=1949470757]
+unique_name_in_owner = true
 self_modulate = Color(0, 0, 0, 1)
 position = Vector2(0, -97)
 
 [node name="BrowL" type="Sprite2D" parent="Skeleton/Neck/Head" unique_id=1039219011]
+unique_name_in_owner = true
 self_modulate = Color(0, 0, 0, 1)
 position = Vector2(-153, -495)
 
 [node name="BrowR" type="Sprite2D" parent="Skeleton/Neck/Head" unique_id=643197750]
+unique_name_in_owner = true
 self_modulate = Color(0, 0, 0, 1)
 position = Vector2(153, -495)
 flip_h = true

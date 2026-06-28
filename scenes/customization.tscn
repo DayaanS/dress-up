@@ -83,12 +83,13 @@ text = "Top"
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 
-[node name="ItemSelection" parent="UI" unique_id=1754921532 node_paths=PackedStringArray("outfit") instance=ExtResource("3_cb7s4")]
+[node name="ItemSelection" parent="UI" unique_id=1754921532 node_paths=PackedStringArray("layers_ui", "outfit") instance=ExtResource("3_cb7s4")]
 offset_left = 168.0
 offset_top = 53.0
 offset_right = -1240.8862
 offset_bottom = -542.1069
 scale = Vector2(1.1112984, 1.2064514)
+layers_ui = NodePath("../Layers")
 outfit = NodePath("../../Outfit")
 
 [node name="ItemColorSelection" parent="UI" unique_id=1949384703 instance=ExtResource("4_cb7s4")]
@@ -100,7 +101,7 @@ offset_bottom = -52.0
 [node name="Layers" parent="UI" unique_id=136292836 node_paths=PackedStringArray("items_parent_node", "item_color_selection", "item_selection") instance=ExtResource("5_pb2oy")]
 offset_left = 768.0
 offset_top = 86.0
-offset_right = -979.0
+offset_right = -1052.0
 offset_bottom = -50.0
 items_parent_node = NodePath("../../Outfit")
 item_color_selection = NodePath("../ItemColorSelection")

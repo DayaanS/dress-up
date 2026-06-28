@@ -102,9 +102,9 @@ metadata/_custom_type_script = "uid://83kjmk21x147"
 
 [resource]
 script = ExtResource("2_c5o5k")
-item_id = "Body"
+item_id = "body"
 name = "Body"
 icon = ExtResource("1_c5o5k")
 parts = Array[ExtResource("1_gac3q")]([SubResource("Resource_nkuvm"), SubResource("Resource_w5y6p"), SubResource("Resource_n22ay"), SubResource("Resource_7jk04"), SubResource("Resource_hjije"), SubResource("Resource_ukkpc"), SubResource("Resource_srw6a"), SubResource("Resource_u5c5i"), SubResource("Resource_gxy7k"), SubResource("Resource_nbhyi"), SubResource("Resource_r03km"), SubResource("Resource_076iy"), SubResource("Resource_rkngo")])
-colors = Array[Color]([Color(1, 1, 1, 1)])
+colors = Array[Color]([Color(0.904042, 0.6972875, 0.6082972, 1)])
 metadata/_custom_type_script = "uid://c18v5m8wr0nyo"
