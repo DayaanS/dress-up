@@ -1,11 +1,11 @@
 extends HBoxContainer
 
 @export var color: Color
-@export var part_name:String
+@export var part_name: String
 @onready var color_picker_button: ColorPickerButton = $ColorPickerButton
 @onready var label: Label = $Label
 
-var color_picker_index = 0
+var color_picker_index: int = 0
 
 
 func change_item_color(item:Item, index:int, color:Color) -> void:

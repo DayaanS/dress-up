@@ -1,5 +1,6 @@
 extends Resource
 
+## Resource for storing data of item parts
 class_name ItemPart 
 
 @export var name: String

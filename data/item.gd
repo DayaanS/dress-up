@@ -1,5 +1,6 @@
 extends Resource
 
+## Resource for storing item data
 class_name Item
 
 @export var item_id: String # needs to be unique for each item, used to identify which item layer corresponds to

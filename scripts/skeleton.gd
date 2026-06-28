@@ -1,5 +1,6 @@
 extends Node2D
 
+## Node that item parts attach to and is posed by animations
 class_name Skeleton
 
 @onready var arm_l_animations: AnimationPlayer = $AnimationTree/ArmLAnimations
@@ -8,7 +9,7 @@ class_name Skeleton
 @onready var leg_r_animations: AnimationPlayer = $AnimationTree/LegRAnimations
 
 
-func add_item_part(item:Item, item_part_data:ItemPart):
+func add_item_part(item:Item, item_part_data:ItemPart) -> void:
 	var item_part = ItemPartNode.new()
 	item_part.sprite = item_part_data.sprite
 	item_part.color = item.colors[item_part_data.color_index]
@@ -19,12 +20,12 @@ func add_item_part(item:Item, item_part_data:ItemPart):
 	parent.add_child(item_part)
 
 
-func add_item(item):
+func add_item(item:Item) -> void:
 	for item_part_data in item.parts:
 		add_item_part(item, item_part_data)
 
 
-func set_pose(category, index):
+func set_pose(category: String, index: int) -> void:
 	match category:
 		"arm_l":
 			play_animation(arm_l_animations, index)
@@ -35,7 +36,7 @@ func set_pose(category, index):
 		"leg_r":
 			play_animation(leg_r_animations, index)
 
-func play_animation(animation_player:AnimationPlayer, index:int):
+func play_animation(animation_player:AnimationPlayer, index:int) -> void:
 	var animations_names_list = animation_player.get_animation_list()
 	animation_player.play(animations_names_list[0]) # reset animation 
 	animation_player.advance(0) # make sure first frame is immediatly used
@@ -43,5 +44,5 @@ func play_animation(animation_player:AnimationPlayer, index:int):
 	animation_player.advance(0)
 
 
-func set_color(item_part:ItemPartNode, color):
+func set_color(item_part:ItemPartNode, color: Color) -> void:
 	item_part.color = color

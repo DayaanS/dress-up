@@ -15,37 +15,35 @@ extends Control
 @export var layers_ui: Control
 @export var outfit: Node2D
 
-var skeleton_scene = preload("res://scenes/skeleton.tscn")
+var skeleton_scene: PackedScene = preload("res://scenes/skeleton.tscn")
 
 var current_item_nodes: Dictionary[String, Skeleton] = {}
 
 @onready var item_color_selection: Control = $"../ItemColorSelection"
 
 
-# adds a skeleton base for item_parts to attach to and returns that node
-func add_item_to_body(all_items_data, index:int, selected: bool):
+## adds a skeleton base for item_parts to attach to and returns that node
+func add_item_to_body(all_items_data:Array[Item], index:int, selected: bool) -> void:
 	if selected == true:
 		var skeleton:Skeleton = skeleton_scene.instantiate()
 		outfit.add_child(skeleton)
 		skeleton.add_item(all_items_data[index])
 		current_item_nodes[all_items_data[index].item_id] = skeleton # + 1 cause item 0 is body
-		print(current_item_nodes)
-		layers_ui.add_layer_to_UI(all_items_data[index].item_id, selected, all_items_data[index].icon)
+		layers_ui.add_layer_to_UI(all_items_data[index].item_id, all_items_data[index].icon)
 	else:
-	#if current_item_nodes[index+1] != null and is_instance_valid(current_item_nodes[index+1]):
 		current_item_nodes[all_items_data[index].item_id].free()
 		layers_ui.remove_layer_from_UI(all_items_data[index].item_id)
 
 
-# reselects the selected item for new user selected colors to update
-func reselect_item():
-	var selected_item_array = Global.get_array_of_item(Global.selected_item)
-	var index = selected_item_array.find(Global.selected_item)
+## reselects the selected item for new user selected colors to update
+func reselect_item() -> void:
+	var selected_item_array:Array[Item] = Global.get_array_of_item(Global.selected_item)
+	var index: int = selected_item_array.find(Global.selected_item)
 	add_item_to_body(selected_item_array, index, false)
 	add_item_to_body(selected_item_array, index, true)
 
 
-func deselect_item(selected_item_array, index):
+func deselect_item(selected_item_array: Array[Item], index: int) -> void:
 	match selected_item_array:
 		Global.all_bodies_data:
 			bodies_list.deselect(index)
@@ -67,8 +65,8 @@ func set_pose_for_limb(limb: String, index: int):
 		if current_item_nodes[key] != null and is_instance_valid(current_item_nodes[key]):
 			current_item_nodes[key].set_pose(limb, index)
 
-# Called when the node enters the scene tree for the first time.
-# Populates ItemList nodes with item or and names
+## Called when the node enters the scene tree for the first time.
+## Populates ItemList nodes with item or and names
 func _ready() -> void:
 	for item in Global.all_bodies_data:
 		bodies_list.add_icon_item(item.icon)
