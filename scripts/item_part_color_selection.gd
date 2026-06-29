@@ -1,13 +1,15 @@
+class_name ItemPartColorSelection
 extends HBoxContainer
+## Color picker button and label for [ItemPart]
 
-@export var color: Color
-@export var part_name: String
-@onready var color_picker_button: ColorPickerButton = $ColorPickerButton
-@onready var label: Label = $Label
+@export var color: Color ## default color of color picker button
+@export var part_name: String ## [ItemPart] name for label text
+@onready var color_picker_button: ColorPickerButton = $ColorPickerButton ## color picker button node
+@onready var label: Label = $Label ## label node
+var color_picker_index: int = 0 ## what index ItemPartColorSelection has on the whole [ItemColorSelection] list
 
-var color_picker_index: int = 0
 
-
+## change color on [Item] colors array of certain index
 func change_item_color(item:Item, index:int, color:Color) -> void:
 	item.colors[index] = color
 

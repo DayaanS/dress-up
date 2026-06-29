@@ -1,34 +1,32 @@
+class_name ItemSelection
 extends Control
+## Item selection UI
 
-@onready var bodies_list: ItemList = %Bodies
-@onready var eyes_list: ItemList = %Eyes
-@onready var brows_list: ItemList = %Brows
-@onready var mouths_list: ItemList = %Mouths
-@onready var hair_list: ItemList = %Hair
-@onready var clothes_list: ItemList = %Clothes
-@onready var accessories_list: ItemList = %Accessories
-@onready var arm_l_poses_list: ItemList = $TabContainer/Poses/ArmLPoses
-@onready var leg_l_poses_list: ItemList = $TabContainer/Poses/LegLPoses
-@onready var arm_r_poses_list: ItemList = $TabContainer/Poses/ArmRPoses
-@onready var leg_r_poses_list: ItemList = $TabContainer/Poses/LegRPoses
-
-@export var layers_ui: Control
-@export var outfit: Node2D
-
-var skeleton_scene: PackedScene = preload("res://scenes/skeleton.tscn")
-
-var current_item_nodes: Dictionary[String, Skeleton] = {}
-
-@onready var item_color_selection: Control = $"../ItemColorSelection"
+@onready var bodies_list: ItemList = %Bodies ## ItemList node for all bodies
+@onready var eyes_list: ItemList = %Eyes ## ItemList node for all eyes
+@onready var brows_list: ItemList = %Brows  ## ItemList node for all brows
+@onready var mouths_list: ItemList = %Mouths  ## ItemList node for all mouths 
+@onready var hair_list: ItemList = %Hair  ## ItemList node for all hair
+@onready var clothes_list: ItemList = %Clothes ## ItemList node for all clothes
+@onready var accessories_list: ItemList = %Accessories ## ItemList node for all accessories
+@onready var arm_l_poses_list: ItemList = $TabContainer/Poses/ArmLPoses ## ItemList node for all left arm poses
+@onready var leg_l_poses_list: ItemList = $TabContainer/Poses/LegLPoses ## ItemList node for all left leg poses
+@onready var arm_r_poses_list: ItemList = $TabContainer/Poses/ArmRPoses ## ItemList node for all right arm poses
+@onready var leg_r_poses_list: ItemList = $TabContainer/Poses/LegRPoses ## ItemList node for all right leg poses
+@export var layers_ui: Control ## [LayersSelection] UI node
+@export var outfit: Node2D ## Parent node for all current [Skeleton] nodes
+var skeleton_scene: PackedScene = preload("res://scenes/skeleton.tscn") ## [Skeleton] scene to instantiate
+var current_item_nodes: Dictionary[String, Skeleton] = {} ## Current [Skeleton] nodes dictionary with item_id as keys
+@onready var item_color_selection: Control = $"../ItemColorSelection" ## [ItemColorSelection] UI node
 
 
-## adds a skeleton base for item_parts to attach to and returns that node
+## adds a [Skeleton] base for item_parts to attach to and returns that node
 func add_item_to_body(all_items_data:Array[Item], index:int, selected: bool) -> void:
 	if selected == true:
 		var skeleton:Skeleton = skeleton_scene.instantiate()
 		outfit.add_child(skeleton)
 		skeleton.add_item(all_items_data[index])
-		current_item_nodes[all_items_data[index].item_id] = skeleton # + 1 cause item 0 is body
+		current_item_nodes[all_items_data[index].item_id] = skeleton
 		layers_ui.add_layer_to_UI(all_items_data[index].item_id, all_items_data[index].icon)
 	else:
 		current_item_nodes[all_items_data[index].item_id].free()
@@ -43,6 +41,7 @@ func reselect_item() -> void:
 	add_item_to_body(selected_item_array, index, true)
 
 
+## deselect item from ItemList
 func deselect_item(selected_item_array: Array[Item], index: int) -> void:
 	match selected_item_array:
 		Global.all_bodies_data:
@@ -60,10 +59,13 @@ func deselect_item(selected_item_array: Array[Item], index: int) -> void:
 		Global.all_accessories_data:
 			accessories_list.deselect(index)
 
+
+## set pose for current [Skeleton] nodes
 func set_pose_for_limb(limb: String, index: int):
 	for key in current_item_nodes:
 		if current_item_nodes[key] != null and is_instance_valid(current_item_nodes[key]):
 			current_item_nodes[key].set_pose(limb, index)
+
 
 ## Called when the node enters the scene tree for the first time.
 ## Populates ItemList nodes with item or and names

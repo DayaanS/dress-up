@@ -1,20 +1,23 @@
+class_name LayersOrdering
 extends Control
+## layer reordering and selection UI
 
-var selected_layer_index = 0
-@onready var layers_list: ItemList = $VBoxContainer/LayersList
-@export var items_parent_node: Node2D
-@export var item_color_selection: Control
-@export var item_selection: Control
-var all_selected_items_nodes:Array[Node]
-var current_layer_count: int = -1
+var selected_layer_index = 0 ## index of selected layer in layer_list
+@onready var layers_list: ItemList = $VBoxContainer/LayersList ## laters list node
+@export var items_parent_node: Node2D ## parent node (Outfit node) of current [Skeleton] nodes
+@export var item_color_selection: Control ## [ItemColorSelection] node
+@export var item_selection: Control ## [ItemSelection] node
+var all_selected_items_nodes:Array[Node] ## array of current [Skeleton] nodes
+var current_layer_count: int = -1 ## amount of layers (less by 1)
 
 
+## add layer item to layers_list
 func add_layer_to_UI(item_id: String, icon: Texture2D) -> void:
 	layers_list.add_item(item_id, icon)
 	layers_list.move_item(layers_list.item_count-1, 0)
 	current_layer_count += 1
 
-
+## remove layer item from layers_list
 func remove_layer_from_UI(item_id: String) -> void:
 	for i in range(layers_list.item_count):
 		var layer_text = layers_list.get_item_text(i)
@@ -44,14 +47,15 @@ func _on_up_pressed() -> void:
 
 func _on_down_pressed() -> void:
 	if Global.selected_item:
-		selected_layer_index = layers_list.get_selected_items()[0]
-		all_selected_items_nodes = items_parent_node.get_children()
-		
-		layers_list.move_item(selected_layer_index, selected_layer_index + 1)
-		var item_node:Skeleton = all_selected_items_nodes[current_layer_count - selected_layer_index]
-		if item_node.get_index() >= 1: 
-			# for item not appear on top again if the item already on the lowest layer
-			items_parent_node.move_child(item_node, item_node.get_index() - 1)
+		if  layers_list.get_selected_items(): 
+			selected_layer_index = layers_list.get_selected_items()[0]
+			all_selected_items_nodes = items_parent_node.get_children()
+			
+			layers_list.move_item(selected_layer_index, selected_layer_index + 1)
+			var item_node:Skeleton = all_selected_items_nodes[current_layer_count - selected_layer_index]
+			if item_node.get_index() >= 1: 
+				# for item not appear on top again if the item already on the lowest layer
+				items_parent_node.move_child(item_node, item_node.get_index() - 1)
 
 
 func _on_to_bottom_pressed() -> void:
